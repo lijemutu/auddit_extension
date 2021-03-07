@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 from textwrap import fill
+from googletrans import Translator
 
 THUMBNAIL_DIR = "data/thumbnails/"
 THUMBNAIL_DIMENSION = (640, 360)
@@ -14,11 +15,12 @@ COMMENT = Image.open("./assets/comment.png").convert("RGBA")
 CENSORED.thumbnail((THUMBNAIL_DIMENSION[0]/2, THUMBNAIL_DIMENSION[1]/2), Image.ANTIALIAS) # aspect ratio resize to fit thumbnail
 
 def generate_thumbnail(context):
+    translator = Translator()
     subreddit = context["subreddit"].capitalize() 
     post = context["post"]
     score = str(post.score)
     num_comments = str(post.num_comments)
-    main_text = post.title
+    main_text = translator.translate(post.title,src='en',dest='es').text
     main_text = fill(main_text, width=25)
 
     thumbnail = Image.new('RGB', THUMBNAIL_DIMENSION, color=(16,16,16))

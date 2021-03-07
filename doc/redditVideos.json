@@ -1,0 +1,7 @@
+{
+    "Nombre": "Reddit videos",
+    "location": "doc/redditVideos.json",
+    "logo": "assets/logo/RV.png",
+    "background": "assets/background/black.png",
+    "used_post": []
+}
