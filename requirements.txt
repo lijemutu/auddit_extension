@@ -4,3 +4,4 @@ moviepy
 scipy
 requests
 googletrans==3.1.0a0
+azure-cognitiveservices-speech
