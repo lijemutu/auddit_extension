@@ -50,5 +50,7 @@ IMAGEMAGICK_BINARY
 
 import os
 
-FFMPEG_BINARY = os.getenv('FFMPEG_BINARY', 'C:\\ffmpeg\\bin\\ffmpeg.exe')
+#FFMPEG_BINARY = os.getenv('FFMPEG_BINARY', 'C:\\ffmpeg\\bin\\ffmpeg.exe')
+FFMPEG_BINARY = os.getenv('FFMPEG_BINARY', 'C:\\Users\\Erick\\ffmpeg\\bin\\ffmpeg.exe')
+#IMAGEMAGICK_BINARY = os.getenv('IMAGEMAGICK_BINARY', 'C:\\Program Files\\ImageMagick-7.0.11-Q16-HDRI\\magick.exe')
 IMAGEMAGICK_BINARY = os.getenv('IMAGEMAGICK_BINARY', 'C:\\Program Files\\ImageMagick-7.0.11-Q16-HDRI\\magick.exe')

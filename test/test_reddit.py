@@ -17,11 +17,11 @@ class TestReddit(unittest.TestCase):
             ctx = {
                 "subreddit": "askreddit",
                 "nsfw": False,
-                "comment_limit": 3,
+                "comment_limit": 4,
                 "page": page
             }
             get_hottest_post(ctx)
-            print(ctx["post"].title)
+            #print(ctx["post"].title)
 
     def test_video(self):
         pageName ='eli5'
@@ -30,7 +30,7 @@ class TestReddit(unittest.TestCase):
             ctx = {
                 "subreddit": "askreddit",
                 "nsfw": False,
-                "comment_limit": 3,
+                "comment_limit": 4,
                 "page": page
             }
             get_hottest_post(ctx)

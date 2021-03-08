@@ -4,17 +4,17 @@ from tasks.generate_video.task import generate_video
 from tasks.upload_video.task import upload_video
 from tasks.generate_thumbnail.task import generate_thumbnail
 from tasks.cleanup.task import cleanup
-import prawcore,gtts
+import prawcore,gtts,json
 
 class Pipeline:
     def __init__(self):
         self.tasks = [
-            #get_hottest_post,
-            #tts,
-            #generate_video,
-            #generate_thumbnail
+            get_hottest_post,
+            tts,
+            generate_video,
+            generate_thumbnail
             #upload_video
-            cleanup
+            #cleanup
         ]
         self.context = dict()
 
@@ -33,5 +33,8 @@ class Pipeline:
 
 
 if __name__ == "__main__":
-    pipeline = Pipeline()
-    pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=10)
+    pageName ='preguntas_reddit_mex'
+    with open('doc/'+pageName+'.json') as page:
+        page = json.load(page)
+        pipeline = Pipeline()
+        pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=15,page=page)

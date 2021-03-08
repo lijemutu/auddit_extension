@@ -4,8 +4,6 @@ from googletrans import Translator
 
 THUMBNAIL_DIR = "data/thumbnails/"
 THUMBNAIL_DIMENSION = (640, 360)
-CLICKBAIT_GIRL = Image.open('./assets/clickbait.png')
-CLICKBAIT_GIRL.thumbnail((THUMBNAIL_DIMENSION[0]/2, THUMBNAIL_DIMENSION[1]/2), Image.ANTIALIAS) # aspect ratio resize to fit thumbnail
 GOLD = Image.open("./assets/gold_32.png")
 PLATINUM = Image.open("./assets/platinum_32.png")
 FORK_ME = Image.open("./assets/forkme.png")
@@ -16,7 +14,7 @@ CENSORED.thumbnail((THUMBNAIL_DIMENSION[0]/2, THUMBNAIL_DIMENSION[1]/2), Image.A
 
 def generate_thumbnail(context):
     translator = Translator()
-    subreddit = context["subreddit"].capitalize() 
+    subreddit = context["subreddit"].capitalize() + ' en Español'
     post = context["post"]
     score = str(post.score)
     num_comments = str(post.num_comments)
@@ -29,10 +27,12 @@ def generate_thumbnail(context):
     font2 = ImageFont.truetype('./assets/Copse-Regular.ttf', 45)
     font3 = ImageFont.truetype('./assets/Copse-Regular.ttf', 30)
 
-    # clickbait girl
-    aw,ah = CLICKBAIT_GIRL.size
-    girl_offset = (THUMBNAIL_DIMENSION[0]-aw,THUMBNAIL_DIMENSION[1]-ah)
-    thumbnail.paste(CLICKBAIT_GIRL, girl_offset, CLICKBAIT_GIRL)
+    # Logo
+    logo = Image.open(context['page']['logo'])
+    logo.thumbnail((THUMBNAIL_DIMENSION[0]/2, THUMBNAIL_DIMENSION[1]/2), Image.ANTIALIAS) # aspect ratio resize to fit thumbnail
+    aw,ah = logo.size
+    logo_offset = (THUMBNAIL_DIMENSION[0]-aw,THUMBNAIL_DIMENSION[1]-ah)
+    thumbnail.paste(logo, logo_offset, logo)
 
     # subreddit 
     title_width, title_height = font.getsize(subreddit)
@@ -49,10 +49,6 @@ def generate_thumbnail(context):
     main_text_offset = (20, 70)
     draw.text(main_text_offset, main_text, font=font2, fill=(255,255,255))
 
-    # fork me
-    fw,fh = FORK_ME.size
-    fork_offset = (THUMBNAIL_DIMENSION[0]-fw, 0)
-    thumbnail.paste(FORK_ME, fork_offset, FORK_ME)
 
     # upvote
     uw, uh = UPVOTE.size

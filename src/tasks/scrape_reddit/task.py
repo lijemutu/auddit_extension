@@ -22,12 +22,20 @@ def addPost(context,post):
    return 
    
 def translatePosts(post):
-   translator = Translator()
-    
-   post.title = translator.translate(post.title,src='en',dest='es').text
+   post.title = spanishTranslate(post.title)
    for comment in post.comments:
-      comment.body = translator.translate(comment.body,src='en',dest='es').text
+      comment.body = spanishTranslate(comment.body)
    return post
+
+def spanishTranslate(text):
+
+   time.sleep(10)
+   translator = Translator()
+   text = translator.translate(text,src='en',dest='es')
+   if text._response.status_code == 429:
+      raise Exception('Google translator has too many requests error code 429')
+
+   return text.text
 
 def previewPost(post):
    i = 0
@@ -35,17 +43,18 @@ def previewPost(post):
    for comment in post.comments:
       print(f"Comment {i}: {comment.body}")
       i+=1
-   #decide = str(input("Do you want to skip post(P) or comments(C) or nah(N)")).upper()
-   decide = 'N'
+   decide = str(input("Do you want to skip post(P) or comments(C) or nah(N)\n")).upper()
+   #decide = 'C'
    if decide == 'N':
       return
    if decide == 'P':
       return 0
    if decide == 'C':
-      #deleted_comments = [int(item) for item in input("Select deleted comments : ").split()]
-      deleted_comments = [0,2]
-      for deleted in deleted_comments:
-         del post.comments[deleted]
+      deleted_comments = [int(item) for item in input("Select deleted comments : ").split()]
+      #deleted_comments = [0,2]
+       
+      for index in sorted(deleted_comments, reverse=True):
+         del post.comments[index]
 
 
 def get_hottest_post(context):
@@ -71,7 +80,7 @@ def get_hottest_post(context):
                      continue
                   if comment.stickied:
                      continue
-                  if not comment.edited:
+                  if comment.edited:
                      continue
                   comment_body = comment.body
                   chars+=comment_body
