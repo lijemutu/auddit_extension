@@ -1,12 +1,11 @@
 import praw
-import os
+import os,requests,uuid
 from praw.models import MoreComments
 from .post import Post, Comment
 import prawcore,time,json
 from googletrans import Translator
 
 client_id = "JQYTt6OcPBrlqg"
-
 client_secret = "O617WeQTJ9hGHwgK3h5zhWAUKHvVuw"
 
 reddit = praw.Reddit(client_id=client_id, client_secret=client_secret, user_agent='contentGet',username='erlototo',password='lijemutu2112')
@@ -22,9 +21,9 @@ def addPost(context,post):
    return 
    
 def translatePosts(post):
-   post.title = spanishTranslate(post.title)
+   post.title = spanishTranslateAzure(post.title)
    for comment in post.comments:
-      comment.body = spanishTranslate(comment.body)
+      comment.body = spanishTranslateAzure(comment.body)
    return post
 
 def spanishTranslate(text):
@@ -36,6 +35,30 @@ def spanishTranslate(text):
       raise Exception('Google translator has too many requests error code 429')
 
    return text.text
+
+def spanishTranslateAzure(text):
+   time.sleep(10)
+   subscriptionAzure="e1b1739b0039424cb6f0cbb39def283a"
+   endpoint = "https://api.cognitive.microsofttranslator.com"
+   region="southcentralus"
+   path = '/translate'
+   constructed_url = endpoint + path
+   params = {
+    'api-version': '3.0',
+    'from': 'en',
+    'to': 'es'
+   }
+   headers = {
+    'Ocp-Apim-Subscription-Key': subscriptionAzure,
+    'Ocp-Apim-Subscription-Region': region,
+    'Content-type': 'application/json',
+    'X-ClientTraceId': str(uuid.uuid4())
+   }
+   request = requests.post(constructed_url, params=params, headers=headers, json=text)
+   response = request.json()
+   return response
+
+
 
 def previewPost(post):
    i = 0
@@ -81,6 +104,10 @@ def get_hottest_post(context):
                   if comment.stickied:
                      continue
                   if comment.edited:
+                     continue
+                  if len(comment.body) > 2000:
+                     continue
+                  if 'http' in comment.body:
                      continue
                   comment_body = comment.body
                   chars+=comment_body

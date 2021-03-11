@@ -26,7 +26,7 @@ FONT = 'Franklin-Gothic-Medium'
 def generate_title(text, audio_path,page):
     #color_clip = ColorClip(SIZE, BG_COLOR)
     audio_clip = AudioFileClip(audio_path)
-    audio_clip = audio_clip.fx(afx.volumex,0.5)
+    audio_clip = audio_clip.fx(afx.volumex,0.7)
     font_size = TITLE_FONT_SIZE
     backGround_clip = ImageClip(page['background'])
     wrapped_text = textwrap.fill(text, width=90)
@@ -52,7 +52,7 @@ def generate_clip(post, comment,page):
     logo_clip = ImageClip(page['logo']).set_position(('left','top')).resize(0.5)
 
     audio_clip = AudioFileClip(audio_path)
-    audio_clip = audio_clip.fx(afx.volumex,0.5)
+    audio_clip = audio_clip.fx(afx.volumex,0.7)
     font_size = TITLE_FONT_SIZE
     author_font_size = 20
 
@@ -68,7 +68,9 @@ def generate_clip(post, comment,page):
     score_pos = (author_pos[0] + author_clip.size[0] + 20, author_pos[1])
     score_clip = score_clip.set_pos(score_pos)
 
-    clip = CompositeVideoClip([backGround_clip,alien_clip,logo_clip, txt_clip, author_clip, score_clip])
+    #clip = CompositeVideoClip([backGround_clip,alien_clip,logo_clip, txt_clip, author_clip, score_clip]) #With Alien
+    clip = CompositeVideoClip([backGround_clip,logo_clip, txt_clip, author_clip, score_clip]) #Without Alien
+
     clip.audio = audio_clip
     clip.duration = audio_clip.duration
     static_clip = VideoFileClip(STATIC_PATH)
@@ -91,7 +93,7 @@ def generate_video(context):
     video = concatenate_videoclips(clips)
     background_audio_clip = AudioFileClip(BGM_PATH)
     background_audio_clip = afx.audio_loop(background_audio_clip, duration=video.duration)
-    background_audio_clip = background_audio_clip.fx(afx.volumex, 0.05)
+    background_audio_clip = background_audio_clip.fx(afx.volumex, 0.1)
     video.audio = CompositeAudioClip([video.audio, background_audio_clip])
     video_id = uuid.uuid4()
     path = f"{VIDEO_PATH}{video_id}.mp4"

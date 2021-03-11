@@ -33,8 +33,10 @@ class Pipeline:
 
 
 if __name__ == "__main__":
-    pageName ='preguntas_reddit_mex'
-    with open('doc/'+pageName+'.json') as page:
-        page = json.load(page)
-        pipeline = Pipeline()
-        pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=15,page=page)
+    paginas =['preguntasRedditColombia']
+
+    for pagina in paginas:
+        with open('doc/'+pagina+'.json') as page:
+            page = json.load(page)
+            pipeline = Pipeline()
+            pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=15,page=page)

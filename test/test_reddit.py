@@ -24,7 +24,7 @@ class TestReddit(unittest.TestCase):
             #print(ctx["post"].title)
 
     def test_video(self):
-        pageName ='eli5'
+        pageName ='preguntas_reddit_mex'
         with open('doc/'+pageName+'.json') as page:
             page = json.load(page)
             ctx = {

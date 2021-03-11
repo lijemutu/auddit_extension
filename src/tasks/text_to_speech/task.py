@@ -15,6 +15,7 @@ TTSMP3_URL = "https://ttsmp3.com/makemp3_new.php"
 
 
 def save_tts(text):
+   time.sleep(random.uniform(1,3))
    try:
       filename = uuid.uuid4()
       path = f"{AUDIO_PATH}{filename}.mp3"
@@ -42,7 +43,7 @@ def save_tts(text):
          print("Speech synthesis canceled: {}".format(cancellation_details.reason))
          if cancellation_details.reason == CancellationReason.Error:
             if cancellation_details.error_details:
-               print("Error details: {}".format(cancellation_details.error_details))
+               raise Exception("Error details: {}".format(cancellation_details.error_details))
          print("Did you update the subscription info?")
 
       return path
