@@ -4,8 +4,8 @@ from moviepy.editor import *
 from googletrans import Translator
 import random,os
 
-TITLE_FONT_SIZE = 30
-FONT_SIZE = 40
+TITLE_FONT_SIZE = 60
+FONT_SIZE = 45
 TITLE_FONT_COLOR = 'white'
 
 BGM_PATH = 'assets/music/'
@@ -68,8 +68,8 @@ def generate_clip(post, comment,page):
     score_pos = (author_pos[0] + author_clip.size[0] + 20, author_pos[1])
     score_clip = score_clip.set_pos(score_pos)
 
-    #clip = CompositeVideoClip([backGround_clip,alien_clip,logo_clip, txt_clip, author_clip, score_clip]) #With Alien
-    clip = CompositeVideoClip([backGround_clip,logo_clip, txt_clip, author_clip, score_clip]) #Without Alien
+    #clip = CompositeVideoClip([backGround_clip,alien_clip,logo_clip, txt_clip, author_clip, score_clip]) #With Alien and logo
+    clip = CompositeVideoClip([backGround_clip, txt_clip, author_clip, score_clip]) #Without Alien and no logo
 
     clip.audio = audio_clip
     clip.duration = audio_clip.duration

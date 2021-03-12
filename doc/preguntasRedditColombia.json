@@ -1,1 +1,11 @@
-{"Nombre": "Preguntas reddit colombia", "location": "doc/preguntasRedditColombia.json", "logo": "assets/logo/reddit_preguntas_colombia.png", "background": "assets/background/black.png", "used_post": ["/r/AskReddit/comments/m2borx/people_who_arent_exhausted_247_how/"]}
+{
+    "Nombre": "Preguntas reddit colombia",
+    "location": "doc/preguntasRedditColombia.json",
+    "logo": "assets/logo/reddit_preguntas_colombia.png",
+    "background": "assets/background/fondo_colombia.png",
+    "video":false,
+    "used_post": [
+        "/r/AskReddit/comments/m2borx/people_who_arent_exhausted_247_how/",
+        "/r/AskReddit/comments/m24tw2/people_with_jobs_that_require_you_to_go_into/"
+    ]
+}

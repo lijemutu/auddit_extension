@@ -12,9 +12,9 @@ class Pipeline:
             get_hottest_post,
             tts,
             generate_video,
-            generate_thumbnail
+            generate_thumbnail,
             #upload_video
-            #cleanup
+            cleanup
         ]
         self.context = dict()
 
@@ -22,21 +22,15 @@ class Pipeline:
         self.context = kwargs
         for task in self.tasks:
             print(f"Current Task: {task.__name__}")          
-            while True:
-                try:
-                    task(self.context)    # do stuff
-                
-                except gtts.tts.gTTSError:
-                    print(f"Retrying: {task.__name__}")
-                    continue
-                break
+            task(self.context)    # do stuff
+
 
 
 if __name__ == "__main__":
-    paginas =['preguntasRedditColombia']
+    paginas =['preguntasRedditColombia','preguntas_reddit_mex']
 
     for pagina in paginas:
         with open('doc/'+pagina+'.json') as page:
             page = json.load(page)
             pipeline = Pipeline()
-            pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=15,page=page)
+            pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=20,page=page)

@@ -1,1 +1,8 @@
-{"Nombre": "Next level videos", "location": "doc/next_level_videos.json", "logo": "assets/logo/NL.png", "background": "assets/background/black.png", "used_post": []}
+{
+    "Nombre": "Next level videos",
+    "location": "doc/next_level_videos.json",
+    "logo": "assets/logo/NL.png",
+    "background": "assets/background/black.png",
+    "video":true,
+    "used_post": []
+}

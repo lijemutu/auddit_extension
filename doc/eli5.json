@@ -1,1 +1,10 @@
-{"Nombre": "Explica como si tuviera 5", "location": "doc/eli5.json", "logo": "assets/logo/eli5.png", "background": "assets/background/black.png", "used_post": ["/r/AskReddit/comments/lzr4ze/whats_something_you_should_always_keep_in_your_car/"]}
+{
+    "Nombre": "Explica como si tuviera 5",
+    "location": "doc/eli5.json",
+    "logo": "assets/logo/eli5.png",
+    "background": "assets/background/black.png",
+    "video": false,
+    "used_post": [
+        "/r/AskReddit/comments/lzr4ze/whats_something_you_should_always_keep_in_your_car/"
+    ]
+}

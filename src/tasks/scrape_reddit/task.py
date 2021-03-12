@@ -37,8 +37,8 @@ def spanishTranslate(text):
    return text.text
 
 def spanishTranslateAzure(text):
-   time.sleep(10)
-   subscriptionAzure="e1b1739b0039424cb6f0cbb39def283a"
+   time.sleep(2)
+   subscriptionAzure="07d815d334e24017a39e761b2a5c3e08"
    endpoint = "https://api.cognitive.microsofttranslator.com"
    region="southcentralus"
    path = '/translate'
@@ -54,9 +54,10 @@ def spanishTranslateAzure(text):
     'Content-type': 'application/json',
     'X-ClientTraceId': str(uuid.uuid4())
    }
-   request = requests.post(constructed_url, params=params, headers=headers, json=text)
+   body = [{'text':text}]
+   request = requests.post(constructed_url, params=params, headers=headers, json=body)
    response = request.json()
-   return response
+   return response[0]['translations'][0]['text']
 
 
 
@@ -66,6 +67,7 @@ def previewPost(post):
    for comment in post.comments:
       print(f"Comment {i}: {comment.body}")
       i+=1
+   print("///////////////////////////////////////////////////////////////////////////////////")
    decide = str(input("Do you want to skip post(P) or comments(C) or nah(N)\n")).upper()
    #decide = 'C'
    if decide == 'N':
@@ -80,7 +82,7 @@ def previewPost(post):
          del post.comments[index]
 
 
-def get_hottest_post(context):
+def get_hottest_postText(context):
    subreddit_name=context["subreddit"]
    comment_limit=context["comment_limit"]
    nsfw=context["nsfw"]
@@ -131,12 +133,11 @@ def get_hottest_post(context):
                post_data = Post(title, comments)
                post_data.score = post.score
                post_data.num_comments = post.num_comments
-               post_data.permalink = post.permalink
-
-               post_data = translatePosts(post_data)
-               
+               post_data.permalink = post.permalink               
                if  previewPost(post_data) == 0:
+                  addPost(context,post)
                   continue
+               post_data = translatePosts(post_data)
                context["post"] = post_data            
                addPost(context,post)
                print("Post name: ",title," char len: ",len(chars))
@@ -150,7 +151,16 @@ def get_hottest_post(context):
       break
    return
 
+def get_hottest_post(context):
+   if context.video == True:
+      return get_hottest_postVideo
+   else: 
+      return get_hottest_postText
+   
 
+def get_hottest_postVideo(context):
+   #TODO
+   pass
 if __name__ == '__main__':
 
    get_hottest_post()
