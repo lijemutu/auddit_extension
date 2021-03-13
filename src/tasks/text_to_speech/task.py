@@ -77,13 +77,11 @@ def save_gtts(text):
    return path
 
 def tts(context):
-   translator = Translator()
    post = context["post"]
-   post.title_audio = save_tts(translator.translate(post.title,src='en',dest='es').text)
+   post.title_audio = save_tts(post.title)
    for comment in post.comments:
-      comment.body_audio = save_tts(translator.translate(comment.body,src='en',dest='es').text)
-      if comment.reply:
-         comment.reply_audio = save_tts(translator.translate(comment.reply,src='en',dest='es').text)
+      comment.body_audio = save_tts(comment.body)
+      
    return
 
 if __name__ == "__main__":

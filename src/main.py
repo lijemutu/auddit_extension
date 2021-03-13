@@ -33,4 +33,4 @@ if __name__ == "__main__":
         with open('doc/'+pagina+'.json') as page:
             page = json.load(page)
             pipeline = Pipeline()
-            pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=20,page=page)
+            pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=15,page=page)

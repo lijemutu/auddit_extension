@@ -28,8 +28,8 @@ def previewPost(post):
       print(f"Comment {i}: {comment.body}")
       i+=1
    print("///////////////////////////////////////////////////////////////////////////////////")
-   #decide = str(input("Do you want to skip post(P), delete comments(C) or accept and proceed to edit (A)\n")).upper()
-   decide = 'A'
+   decide = str(input("Do you want to skip post(P), delete comments(C) or accept and proceed to edit (A)\n")).upper()
+   #decide = 'A'
    if decide == 'A':
       return
    if decide == 'P':
@@ -50,7 +50,7 @@ def translateEditComments(post):
    for comment in range(0,len(post.comments)):
       print(f"English comment: {englishPost.comments[comment].body}\n")
       print(f"Traducción: {post.comments[comment].body}\n")
-      post.comments[comment].body = sys.stdin.readlines()
+      post.comments[comment].body = sys.stdin.read()
       print("/////COMMENT SPACE///////")
 
    return post
@@ -80,9 +80,9 @@ def get_hottest_postText(context):
                      continue
                   if comment.edited:
                      continue
-                  if len(comment.body) > 1000:
+                  if len(comment.body) > 2000:
                      continue
-                  if comment.score < 200:
+                  if comment.score < 50:
                      continue
                   if 'http' in comment.body:
                      continue
