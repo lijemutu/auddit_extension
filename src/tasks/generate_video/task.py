@@ -4,8 +4,8 @@ from moviepy.editor import *
 from googletrans import Translator
 import random,os
 
-TITLE_FONT_SIZE = 60
-FONT_SIZE = 45
+TITLE_FONT_SIZE = 30
+FONT_SIZE = 30
 TITLE_FONT_COLOR = 'white'
 
 BGM_PATH = 'assets/music/'

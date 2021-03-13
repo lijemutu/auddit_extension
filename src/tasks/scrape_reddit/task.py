@@ -1,9 +1,10 @@
 import praw
-import os,requests,uuid
+import os,requests,uuid,copy,sys
 from praw.models import MoreComments
 from .post import Post, Comment
 import prawcore,time,json
 from googletrans import Translator
+from .translate import translatePosts,spanishTranslate, spanishTranslateAzure
 
 client_id = "JQYTt6OcPBrlqg"
 client_secret = "O617WeQTJ9hGHwgK3h5zhWAUKHvVuw"
@@ -20,47 +21,6 @@ def addPost(context,post):
       f.write(json.dumps(context['page']))
    return 
    
-def translatePosts(post):
-   post.title = spanishTranslateAzure(post.title)
-   for comment in post.comments:
-      comment.body = spanishTranslateAzure(comment.body)
-   return post
-
-def spanishTranslate(text):
-
-   time.sleep(10)
-   translator = Translator()
-   text = translator.translate(text,src='en',dest='es')
-   if text._response.status_code == 429:
-      raise Exception('Google translator has too many requests error code 429')
-
-   return text.text
-
-def spanishTranslateAzure(text):
-   time.sleep(2)
-   subscriptionAzure="07d815d334e24017a39e761b2a5c3e08"
-   endpoint = "https://api.cognitive.microsofttranslator.com"
-   region="southcentralus"
-   path = '/translate'
-   constructed_url = endpoint + path
-   params = {
-    'api-version': '3.0',
-    'from': 'en',
-    'to': 'es'
-   }
-   headers = {
-    'Ocp-Apim-Subscription-Key': subscriptionAzure,
-    'Ocp-Apim-Subscription-Region': region,
-    'Content-type': 'application/json',
-    'X-ClientTraceId': str(uuid.uuid4())
-   }
-   body = [{'text':text}]
-   request = requests.post(constructed_url, params=params, headers=headers, json=body)
-   response = request.json()
-   return response[0]['translations'][0]['text']
-
-
-
 def previewPost(post):
    i = 0
    print(f"Post name: {post.title}")
@@ -68,9 +28,9 @@ def previewPost(post):
       print(f"Comment {i}: {comment.body}")
       i+=1
    print("///////////////////////////////////////////////////////////////////////////////////")
-   decide = str(input("Do you want to skip post(P) or comments(C) or nah(N)\n")).upper()
-   #decide = 'C'
-   if decide == 'N':
+   #decide = str(input("Do you want to skip post(P), delete comments(C) or accept and proceed to edit (A)\n")).upper()
+   decide = 'A'
+   if decide == 'A':
       return
    if decide == 'P':
       return 0
@@ -81,6 +41,19 @@ def previewPost(post):
       for index in sorted(deleted_comments, reverse=True):
          del post.comments[index]
 
+
+def translateEditComments(post):
+   englishPost = copy.deepcopy(post)
+   post = translatePosts(post)
+   print(f"Post title : {englishPost.title}")
+   post.title = str(input(f"Traducción: {post.title} \nEscribe el titulo corregido\n"))
+   for comment in range(0,len(post.comments)):
+      print(f"English comment: {englishPost.comments[comment].body}\n")
+      print(f"Traducción: {post.comments[comment].body}\n")
+      post.comments[comment].body = sys.stdin.readlines()
+      print("/////COMMENT SPACE///////")
+
+   return post
 
 def get_hottest_postText(context):
    subreddit_name=context["subreddit"]
@@ -107,7 +80,9 @@ def get_hottest_postText(context):
                      continue
                   if comment.edited:
                      continue
-                  if len(comment.body) > 2000:
+                  if len(comment.body) > 1000:
+                     continue
+                  if comment.score < 200:
                      continue
                   if 'http' in comment.body:
                      continue
@@ -137,7 +112,7 @@ def get_hottest_postText(context):
                if  previewPost(post_data) == 0:
                   addPost(context,post)
                   continue
-               post_data = translatePosts(post_data)
+               post_data = translateEditComments(post_data)
                context["post"] = post_data            
                addPost(context,post)
                print("Post name: ",title," char len: ",len(chars))
@@ -152,15 +127,16 @@ def get_hottest_postText(context):
    return
 
 def get_hottest_post(context):
-   if context.video == True:
-      return get_hottest_postVideo
+   if context['page']['video'] == True:
+      return get_hottest_postVideo(context)
    else: 
-      return get_hottest_postText
+      return get_hottest_postText(context)
    
 
 def get_hottest_postVideo(context):
    #TODO
    pass
+
 if __name__ == '__main__':
 
    get_hottest_post()

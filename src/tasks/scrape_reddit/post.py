@@ -8,6 +8,8 @@ class Post:
       for c in self.comments:
          s += f"\n{c}"
       return s
+   def __copy__(self):
+        return Post(self.title,self.comments)
 
 class Comment:
    def __init__(self, body, reply):

@@ -33,8 +33,11 @@ class TestReddit(unittest.TestCase):
                 "comment_limit": 4,
                 "page": page
             }
+            print("task: get_hottest_post")
             get_hottest_post(ctx)
+            print("task: tts")
             tts(ctx)
+            print("task: generate video")
             generate_video(ctx)
 
 
