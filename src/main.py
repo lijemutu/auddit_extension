@@ -7,15 +7,23 @@ from tasks.cleanup.task import cleanup
 import prawcore,gtts,json
 
 class Pipeline:
-    def __init__(self):
-        self.tasks = [
-            get_hottest_post,
-            tts,
-            generate_video,
-            generate_thumbnail,
-            #upload_video
-            cleanup
-        ]
+    def __init__(self,page):
+        if page['video'] == False:
+            self.tasks = [
+                get_hottest_post,
+                tts,
+                generate_video,
+                generate_thumbnail,
+                #upload_video
+                cleanup
+            ]
+        else:
+             self.tasks = [
+                get_hottest_post,
+                generate_video,
+                #upload_video
+                cleanup
+            ]
         self.context = dict()
 
     def execute(self, **kwargs):
@@ -27,10 +35,10 @@ class Pipeline:
 
 
 if __name__ == "__main__":
-    paginas =['preguntasRedditColombia','preguntas_reddit_mex']
+    paginas =['next_level_videos']
 
     for pagina in paginas:
         with open('doc/'+pagina+'.json') as page:
             page = json.load(page)
-            pipeline = Pipeline()
-            pipeline.execute(subreddit='askreddit', nsfw=False, comment_limit=15,page=page)
+            pipeline = Pipeline(page)
+            pipeline.execute(nsfw=False, comment_limit=15,page=page)

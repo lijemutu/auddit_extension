@@ -1,8 +1,1 @@
-{
-    "Nombre": "Next level videos",
-    "location": "doc/next_level_videos.json",
-    "logo": "assets/logo/NL.png",
-    "background": "assets/background/black.png",
-    "video":true,
-    "used_post": []
-}
+{"Nombre": "Next level videos", "subreddit": "nextfuckinglevel", "location": "doc/next_level_videos.json", "logo": "assets/logo/NL.png", "background": "assets/background/fondo_next_level_videos.png", "video": true, "used_post": ["/r/nextfuckinglevel/comments/m5stlp/rock_climbing_ping_pong/", "/r/nextfuckinglevel/comments/m5l8jt/painting_comes_to_life_when_colors_are_inverted/", "/r/nextfuckinglevel/comments/m5lo0k/a_true_diamond_dog/", "/r/nextfuckinglevel/comments/m5qzvp/igloo_dubs_anyone/", "/r/nextfuckinglevel/comments/m5hz8m/how_the_dutch_build_a_tunnel_under_a_highway_in/", "/r/nextfuckinglevel/comments/m5iu2w/the_cake_server_josephs_machines/", "/r/nextfuckinglevel/comments/m5qi2c/sleepy_man_flint_hill_special_10_years_later/", "/r/nextfuckinglevel/comments/m5h092/dad_turns_his_sons_dreams_into_reality/"]}

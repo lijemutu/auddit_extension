@@ -1,7 +1,8 @@
 class Post:
-   def __init__(self, title, comments):
+   def __init__(self, title, comments,videos):
       self.title: str = title
       self.comments: [Comment] = comments
+      self.videos = videos
 
    def __str__(self):
       s = f"{self.title}\n"

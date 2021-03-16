@@ -1,5 +1,6 @@
 {
     "Nombre": "Explica como si tuviera 5",
+    "subreddit": "explainlikeimfive",
     "location": "doc/eli5.json",
     "logo": "assets/logo/eli5.png",
     "background": "assets/background/black.png",
