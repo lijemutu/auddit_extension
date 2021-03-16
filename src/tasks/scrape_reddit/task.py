@@ -106,6 +106,8 @@ def get_hottest_postText(context):
                      chars += comment_body
                      if comment_body == "[removed]":
                            continue
+                     if chars > 10000:
+                        break
                      comment_reply = ""
                      comment.replies.replace_more(limit=1)
                      if len(comment.replies) > 0:

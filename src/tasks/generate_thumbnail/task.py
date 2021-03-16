@@ -14,7 +14,7 @@ CENSORED.thumbnail((THUMBNAIL_DIMENSION[0]/2, THUMBNAIL_DIMENSION[1]/2), Image.A
 
 def generate_thumbnail(context):
     translator = Translator()
-    subreddit = context["subreddit"].capitalize() + ' en Español'
+    subreddit = context["page"]["subreddit"].capitalize() + ' en Español'
     post = context["post"]
     score = str(post.score)
     num_comments = str(post.num_comments)

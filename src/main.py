@@ -35,10 +35,10 @@ class Pipeline:
 
 
 if __name__ == "__main__":
-    paginas =['next_level_videos']
+    paginas =['preguntasRedditColombia','next_level_videos','redditVideos']
 
     for pagina in paginas:
         with open('doc/'+pagina+'.json') as page:
             page = json.load(page)
             pipeline = Pipeline(page)
-            pipeline.execute(nsfw=False, comment_limit=15,page=page)
+            pipeline.execute(nsfw=False, comment_limit=20,page=page)
