@@ -6,6 +6,7 @@ paths = [
     #"./data/video/*.mp4",
     "./data/audio/*.mp3",
     ".data/video/tmp_video/*.mp4"
+    "*.mp4"
 ]
 
 def cleanup(context):

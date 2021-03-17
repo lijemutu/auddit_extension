@@ -49,8 +49,7 @@ def previewPost(post):
    if decide == 'P':
       return 0
    if decide == 'C':
-      deleted_comments = [int(item) for item in input(
-         "Select deleted comments : ").split()]
+      deleted_comments = [int(item) for item in input("Select deleted comments : ").split()]
       #deleted_comments = [0,2]
 
       for index in sorted(deleted_comments, reverse=True):
@@ -102,10 +101,14 @@ def get_hottest_postText(context):
                            continue
                      if 'http' in comment.body:
                            continue
+                     if '/u/' in comment.body:
+                        continue
                      comment_body = comment.body
                      
                      if comment_body == "[removed]":
-                           continue
+                        continue
+                     if comment_body == "[deleted]":
+                        continue
                      
                      comment_reply = ""
                      chars += comment_body
