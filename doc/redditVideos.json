@@ -1,1 +1,27 @@
-{"Nombre": "Reddit videos", "subreddit": "nextfuckinglevel", "location": "doc/redditVideos.json", "logo": "assets/logo/RV.png", "background": "assets/background/fondo_reddit_videos.png", "video": true, "used_post": ["/r/nextfuckinglevel/comments/m5l8jt/painting_comes_to_life_when_colors_are_inverted/", "/r/nextfuckinglevel/comments/m5stlp/rock_climbing_ping_pong/", "/r/nextfuckinglevel/comments/m5lo0k/a_true_diamond_dog/", "/r/nextfuckinglevel/comments/m5qzvp/igloo_dubs_anyone/", "/r/nextfuckinglevel/comments/m5hz8m/how_the_dutch_build_a_tunnel_under_a_highway_in/", "/r/nextfuckinglevel/comments/m5iu2w/the_cake_server_josephs_machines/"]}
+{
+    "Nombre": "Reddit videos",
+    "subreddit": "woahdude",
+    "location": "doc/redditVideos.json",
+    "logo": "assets/logo/RV.png",
+    "background": "assets/background/fondo_reddit_videos.png",
+    "video": true,
+    "used_post": [
+        "/r/nextfuckinglevel/comments/m5l8jt/painting_comes_to_life_when_colors_are_inverted/",
+        "/r/nextfuckinglevel/comments/m5stlp/rock_climbing_ping_pong/",
+        "/r/nextfuckinglevel/comments/m5lo0k/a_true_diamond_dog/",
+        "/r/nextfuckinglevel/comments/m5qzvp/igloo_dubs_anyone/",
+        "/r/nextfuckinglevel/comments/m5hz8m/how_the_dutch_build_a_tunnel_under_a_highway_in/",
+        "/r/nextfuckinglevel/comments/m5iu2w/the_cake_server_josephs_machines/",
+        "/r/nextfuckinglevel/comments/m69932/thats_a_wonderful_neighbor/",
+        "/r/nextfuckinglevel/comments/m65g5k/streamer_epicmoh_celebrates_one_of_his_viewers/",
+        "/r/nextfuckinglevel/comments/m69bx8/this_insanely_talented_bartender/",
+        "/r/nextfuckinglevel/comments/m6blfc/son_surprises_mom_that_he_hasnt_seen_in_7_months/",
+        "/r/nextfuckinglevel/comments/m66a62/jackie_chan_and_his_tricks/",
+        "/r/nextfuckinglevel/comments/m6bj2k/grandpa_still_got_it_and_able_to_do_some_neat/",
+        "/r/nextfuckinglevel/comments/m66ip9/double_balancing_act/",
+        "/r/nextfuckinglevel/comments/m6989e/fucking_metal/",
+        "/r/nextfuckinglevel/comments/m603j7/whistling_skills_are/",
+        "/r/nextfuckinglevel/comments/m6abb6/this_man_with_the_motorcycle_let_most_of_the/",
+        "/r/nextfuckinglevel/comments/m67q6o/lava_sampling/"
+    ]
+}

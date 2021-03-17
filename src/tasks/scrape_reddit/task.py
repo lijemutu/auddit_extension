@@ -96,18 +96,17 @@ def get_hottest_postText(context):
                            continue
                      if comment.edited:
                            continue
-                     if len(comment.body) > 2000:
+                     if len(comment.body) > 1500:
                            continue
                      if comment.score < 50:
                            continue
                      if 'http' in comment.body:
                            continue
                      comment_body = comment.body
-                     chars += comment_body
+                     
                      if comment_body == "[removed]":
                            continue
-                     if chars > 10000:
-                        break
+                     chars += comment_body
                      comment_reply = ""
                      comment.replies.replace_more(limit=1)
                      if len(comment.replies) > 0:
@@ -115,12 +114,12 @@ def get_hottest_postText(context):
                            if isinstance(reply, MoreComments):
                               continue
                            comment_reply = reply.body
-                           chars += comment_reply
+                           
                      comment_output = Comment(comment_body, comment_reply)
                      comment_output.author = comment.author.name
                      comment_output.score = comment.score
                      comments.append(comment_output)
-                     if len(comments) >= comment_limit:
+                     if len(chars)>8000:
                            break
 
                   post_data = Post(title, comments)
@@ -152,12 +151,17 @@ def get_hottest_post(context):
 
 
 def downloadVideo(url):
-   time.sleep(3)
+   
    reddit = Downloader(max_q=True)
    reddit.log = False
    reddit.path = 'C:\\Users\\Erick\\projects\\auddit_extension\\data\\video\\tmp_video'
    reddit.url = url
-   path =reddit.download()
+   while True:
+      time.sleep(3)
+      path =reddit.download()
+      if str(path).endswith('.mp4') or str(path).endswith('.gif'):
+         break
+      print("Retrying Download...")
    print("Video Downloaded!")
    return path
 
@@ -180,7 +184,7 @@ def get_hottest_postVideo(context):
                   continue
                if not post.stickied and post.over_18 == nsfw and post.is_video == True:
                   duration+=post.media['reddit_video']['duration']
-                  if duration >300:
+                  if duration >400:
                      break
                   if post.media['reddit_video']['duration'] > 60:
                      break
