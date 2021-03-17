@@ -35,8 +35,8 @@ class Pipeline:
 
 
 if __name__ == "__main__":
-    paginas =['preguntas_reddit_mex','preguntasRedditColombia','next_level_videos','redditVideos']
-    #paginas =['redditVideos']
+    #paginas =['preguntas_reddit_mex','preguntasRedditColombia','next_level_videos','redditVideos']
+    paginas =['next_level_videos','redditVideos']
 
     for pagina in paginas:
         with open('doc/'+pagina+'.json') as page:

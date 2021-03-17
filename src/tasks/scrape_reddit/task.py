@@ -106,21 +106,16 @@ def get_hottest_postText(context):
                      
                      if comment_body == "[removed]":
                            continue
-                     chars += comment_body
+                     
                      comment_reply = ""
-                     comment.replies.replace_more(limit=1)
-                     if len(comment.replies) > 0:
-                           reply = comment.replies[0]
-                           if isinstance(reply, MoreComments):
-                              continue
-                           comment_reply = reply.body
-                           
+                     chars += comment_body
+                     if len(chars)>9999:
+                        break      
                      comment_output = Comment(comment_body, comment_reply)
                      comment_output.author = comment.author.name
                      comment_output.score = comment.score
                      comments.append(comment_output)
-                     if len(chars)>8000:
-                           break
+
 
                   post_data = Post(title, comments)
                   post_data.score = post.score
@@ -169,7 +164,6 @@ def downloadVideo(url):
 
 def get_hottest_postVideo(context):
    subreddit_name = context["page"]["subreddit"]
-   comment_limit = context["comment_limit"]
    nsfw = context["nsfw"]
    subreddit = reddit.subreddit(subreddit_name)
    hot_posts = subreddit.hot(limit=100)
@@ -187,7 +181,7 @@ def get_hottest_postVideo(context):
                   if duration >400:
                      break
                   if post.media['reddit_video']['duration'] > 60:
-                     break
+                     continue
                   post_info ={}
                   post_info['title'] = post.title
                   post_info['author'] = post.author.name
