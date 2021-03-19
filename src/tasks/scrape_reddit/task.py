@@ -49,8 +49,7 @@ def previewPost(post):
    if decide == 'P':
       return 0
    if decide == 'C':
-      deleted_comments = [int(item) for item in input(
-         "Select deleted comments : ").split()]
+      deleted_comments = [int(item) for item in input("Select deleted comments : ").split()]
       #deleted_comments = [0,2]
 
       for index in sorted(deleted_comments, reverse=True):
@@ -102,25 +101,24 @@ def get_hottest_postText(context):
                            continue
                      if 'http' in comment.body:
                            continue
+                     if '/u/' in comment.body:
+                        continue
                      comment_body = comment.body
                      
                      if comment_body == "[removed]":
-                           continue
-                     chars += comment_body
+                        continue
+                     if comment_body == "[deleted]":
+                        continue
+                     
                      comment_reply = ""
-                     comment.replies.replace_more(limit=1)
-                     if len(comment.replies) > 0:
-                           reply = comment.replies[0]
-                           if isinstance(reply, MoreComments):
-                              continue
-                           comment_reply = reply.body
-                           
+                     chars += comment_body
+                     if len(chars)>9999:
+                        break      
                      comment_output = Comment(comment_body, comment_reply)
                      comment_output.author = comment.author.name
                      comment_output.score = comment.score
                      comments.append(comment_output)
-                     if len(chars)>8000:
-                           break
+
 
                   post_data = Post(title, comments)
                   post_data.score = post.score
@@ -169,7 +167,6 @@ def downloadVideo(url):
 
 def get_hottest_postVideo(context):
    subreddit_name = context["page"]["subreddit"]
-   comment_limit = context["comment_limit"]
    nsfw = context["nsfw"]
    subreddit = reddit.subreddit(subreddit_name)
    hot_posts = subreddit.hot(limit=100)
