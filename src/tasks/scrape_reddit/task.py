@@ -184,10 +184,9 @@ def get_hottest_postVideo(context):
                   continue
                if not post.stickied and post.over_18 == nsfw and post.is_video == True:
                   duration+=post.media['reddit_video']['duration']
-                  if duration >400:
-                     break
+                  
                   if post.media['reddit_video']['duration'] > 60:
-                     break
+                     continue
                   post_info ={}
                   post_info['title'] = post.title
                   post_info['author'] = post.author.name
@@ -201,11 +200,11 @@ def get_hottest_postVideo(context):
                   post_info['height'],post_info['width'] = post.media['reddit_video']['height'],post.media['reddit_video']['width']
                   
                   post_info['score'] = post.score
-                  
+
                   
                   addPost(context, post)
                   post_data.append(post_info)
-                  if len(post_data)>10:
+                  if duration >400:
                      break
          context['post'] = post_data
 
