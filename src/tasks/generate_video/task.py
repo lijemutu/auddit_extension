@@ -28,9 +28,9 @@ def generate_title(text, audio_path,page):
     #color_clip = ColorClip(SIZE, BG_COLOR)
     audio_clip = AudioFileClip(audio_path)
     audio_clip = audio_clip.fx(afx.volumex,0.7)
-    font_size = TITLE_FONT_SIZE
+    font_size = TITLE_FONT_SIZE+20
     backGround_clip = ImageClip(page['background'])
-    wrapped_text = textwrap.fill(text, width=90)
+    wrapped_text = textwrap.fill(text, width=50)
     txt_clip = TextClip(wrapped_text,fontsize=font_size, font=FONT, color=TITLE_FONT_COLOR, align="west")
     txt_clip = txt_clip.set_pos("center")
     clip = CompositeVideoClip([backGround_clip, txt_clip])
@@ -40,22 +40,6 @@ def generate_title(text, audio_path,page):
     static_clip = static_clip.fx(afx.volumex, 0.15)
     clip = concatenate_videoclips([clip, static_clip])
     
-    return clip
-
-def generate_title_video(page):
-    #color_clip = ColorClip(SIZE, BG_COLOR)
-    text = page['Nombre']+'\n'+ date.today().strftime("%d/%m/%Y")
-    font_size = TITLE_FONT_SIZE
-    backGround_clip = ImageClip(page['background'])
-    wrapped_text = textwrap.fill(text, width=90)
-    txt_clip = TextClip(wrapped_text,fontsize=font_size, font=FONT, color=TITLE_FONT_COLOR, align="west")
-    txt_clip = txt_clip.set_pos("center")
-    clip = CompositeVideoClip([backGround_clip, txt_clip])
-    clip.duration = 2
-    static_clip = VideoFileClip(STATIC_PATH)
-    static_clip = static_clip.fx(afx.volumex, 0.15)
-    clip = concatenate_videoclips([clip, static_clip])
-
     return clip
 
 def generate_clip(post, comment,page):
@@ -172,7 +156,6 @@ def generate_clip_video(video,page):
 def generate_video_Video(context):
     post = context["post"]
     clips = []
-    clips.append(generate_title_video(context['page']))
 
     for video in post:
         comment_clip = generate_clip_video(video,context['page'])           

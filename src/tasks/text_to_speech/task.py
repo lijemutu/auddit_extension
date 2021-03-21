@@ -25,7 +25,7 @@ def save_tts(text):
 
       synthesizer = SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
 
-      text = f"""
+      textModified = f"""
     <speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="es-MX">
         <voice name="es-MX-HildaRUS">
             {text}            
@@ -33,14 +33,14 @@ def save_tts(text):
     </speak>""" 
 
       ## Calling the Speech Sythesizer 
-      result = synthesizer.speak_ssml_async(ssml=text).get()
+      result = synthesizer.speak_ssml_async(ssml=textModified).get()
 
       if result.reason == ResultReason.SynthesizingAudioCompleted:
          pass
       #   print("Speech synthesized to speaker for text [{}]".format(text))
       elif result.reason == ResultReason.Canceled:
          cancellation_details = result.cancellation_details
-         print("Speech synthesis canceled: {}".format(cancellation_details.reason))
+         print("Speech synthesis canceled: {}".format(cancellation_details.error_details))
          if cancellation_details.reason == CancellationReason.Error:
             if cancellation_details.error_details:
                raise Exception("Error details: {}".format(cancellation_details.error_details))
@@ -48,7 +48,7 @@ def save_tts(text):
 
       return path
    except:
-      print("TTS Rate limit reached - Fallback on Google text-to-speech")
+      print("TTS Rate limit reached - Fallback on ttsmp3 service")
       return save_ttsService(text)
 
 def save_ttsService(text):

@@ -23,7 +23,21 @@ class TestReddit(unittest.TestCase):
             get_hottest_post(ctx)
             # print(ctx["post"].title)
 
-    def test_video(self):
+    def test_video_Text(self):
+        pageName = 'preguntas_reddit_mex'
+        with open('doc/'+pageName+'.json') as page:
+            page = json.load(page)
+            ctx = {
+                "nsfw": False,
+                "comment_limit": 4,
+                "page": page
+            }
+            print("task: get_hottest_post")
+            get_hottest_post(ctx)
+            print("task: generate video")
+            generate_video(ctx)
+
+    def test_video_Video(self):
         pageName = 'redditVideos'
         with open('doc/'+pageName+'.json') as page:
             page = json.load(page)
