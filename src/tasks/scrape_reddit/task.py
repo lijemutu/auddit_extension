@@ -73,7 +73,6 @@ def translateEditComments(post):
 
 def get_hottest_postText(context):
    subreddit_name = context["page"]["subreddit"]
-   comment_limit = context["comment_limit"]
    nsfw = context["nsfw"]
    subreddit = reddit.subreddit(subreddit_name)
    hot_posts = subreddit.hot(limit=100)
@@ -103,6 +102,8 @@ def get_hottest_postText(context):
                            continue
                      if '/u/' in comment.body:
                         continue
+                     if 'Edit' in comment.body:
+                        continue
                      comment_body = comment.body
                      
                      if comment_body == "[removed]":
@@ -112,12 +113,13 @@ def get_hottest_postText(context):
                      
                      comment_reply = ""
                      chars += comment_body
-                     if len(chars)>9999:
-                        break      
+                         
                      comment_output = Comment(comment_body, comment_reply)
                      comment_output.author = comment.author.name
                      comment_output.score = comment.score
                      comments.append(comment_output)
+                     if len(chars)>9999:
+                        break  
 
 
                   post_data = Post(title, comments)
@@ -180,10 +182,11 @@ def get_hottest_postVideo(context):
                if isPostDuplicate(context, post):
                   continue
                if not post.stickied and post.over_18 == nsfw and post.is_video == True:
-                  duration+=post.media['reddit_video']['duration']
+                  
                   
                   if post.media['reddit_video']['duration'] > 60:
                      continue
+                  
                   post_info ={}
                   post_info['title'] = post.title
                   post_info['author'] = post.author.name
@@ -201,7 +204,8 @@ def get_hottest_postVideo(context):
                   
                   addPost(context, post)
                   post_data.append(post_info)
-                  if duration >400:
+                  duration+=post.media['reddit_video']['duration']
+                  if duration >250:
                      break
          context['post'] = post_data
 
@@ -214,5 +218,4 @@ def get_hottest_postVideo(context):
 
 
 if __name__ == '__main__':
-
-   get_hottest_post()
+   pass

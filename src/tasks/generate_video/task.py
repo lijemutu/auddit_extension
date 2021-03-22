@@ -101,6 +101,7 @@ def generate_video_Text(context):
     context["video_path"] = path
     context["video_id"] = video_id
     video.write_videofile(path, fps=24, codec='libx264', threads=4)
+    video.close()
 
 def generate_video(context):
     if context['page']['video'] == True:
@@ -172,3 +173,4 @@ def generate_video_Video(context):
     context["video_path"] = path
     context["video_id"] = video_id
     video.write_videofile(path, fps=24, codec='libx264', threads=4)
+    video.close()
