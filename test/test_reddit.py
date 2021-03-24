@@ -1,9 +1,11 @@
 # Python code to demonstrate working of unittest
 import unittest
-from src.tasks.scrape_reddit.task import get_hottest_post
+from src.tasks.scrape_reddit.task import get_hottest_post,translateEditComments
 from src.tasks.generate_video.task import generate_video
 from src.tasks.text_to_speech.task import tts
 import json
+from unittest.mock import patch
+from io import StringIO
 
 
 class TestReddit(unittest.TestCase):
@@ -50,6 +52,18 @@ class TestReddit(unittest.TestCase):
             get_hottest_post(ctx)
             print("task: generate video")
             generate_video(ctx)
+
+    @patch("sys.stdin", StringIO("titulo corregido\ncomentario corregido1\n^Z\n comentario corregido 2\n^Z\n"))
+    def test_editComments(self):
+        class Post(dict):
+            pass
+        post = Post()
+        post.title ='Titulo de prueba'
+        post.comments = [Post(),Post()]
+        post.comments[0].body = 'Pruebba0'
+        post.comments[1].body = 'Pruebba1'
+        translateEditComments(post)
+
 
 
 if __name__ == '__main__':

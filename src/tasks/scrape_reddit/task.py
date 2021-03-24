@@ -1,3 +1,4 @@
+from logging import raiseExceptions
 import praw
 import os
 import requests
@@ -65,7 +66,15 @@ def translateEditComments(post):
    for comment in range(0, len(post.comments)):
       print(f"English comment: {englishPost.comments[comment].body}\n")
       print(f"Traducción: {post.comments[comment].body}\n")
-      post.comments[comment].body = sys.stdin.read()
+      try:
+         post.comments[comment].body = sys.stdin.read()
+      except KeyboardInterrupt:
+         d = str(input("Do you really want to exit? Y/N\n"))
+         if d=='Y':
+            raise KeyboardInterrupt("Escaped")
+         if d=='N':
+            print("Write again")
+            post.comments[comment].body = sys.stdin.read()
       print("/////COMMENT SPACE///////")
 
    return post
@@ -94,7 +103,7 @@ def get_hottest_postText(context):
                            continue
                      if comment.edited:
                            continue
-                     if len(comment.body) > 1500:
+                     if len(comment.body) > 1000:
                            continue
                      if comment.score < 50:
                            continue
@@ -118,7 +127,7 @@ def get_hottest_postText(context):
                      comment_output.author = comment.author.name
                      comment_output.score = comment.score
                      comments.append(comment_output)
-                     if len(chars)>9999:
+                     if len(chars)>4999:
                         break  
 
 

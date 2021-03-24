@@ -53,7 +53,7 @@ def generate_clip(post, comment,page):
     logo_clip = ImageClip(page['logo']).set_position(('left','top')).resize(0.5)
 
     audio_clip = AudioFileClip(audio_path)
-    audio_clip = audio_clip.fx(afx.volumex,0.7)
+    audio_clip = audio_clip.fx(afx.volumex,0.85)
     font_size = TITLE_FONT_SIZE
     author_font_size = 20
 
@@ -84,17 +84,12 @@ def generate_video_Text(context):
     clips = []
     clips.append(generate_title(post.title, post.title_audio,context['page']))
     for comment in post.comments:
-        if len(comment.body)<900:    
-            comment_clip = generate_clip(post, comment,context['page'])
-            # overlay reply
-            if comment.reply:
-                # TODO this
-                pass
-            clips.append(comment_clip)
+        comment_clip = generate_clip(post, comment,context['page'])
+        clips.append(comment_clip)
     video = concatenate_videoclips(clips)
     background_audio_clip = AudioFileClip(BGM_PATH)
     background_audio_clip = afx.audio_loop(background_audio_clip, duration=video.duration)
-    background_audio_clip = background_audio_clip.fx(afx.volumex, 0.1)
+    background_audio_clip = background_audio_clip.fx(afx.volumex, 0.05)
     video.audio = CompositeAudioClip([video.audio, background_audio_clip])
     video_id = uuid.uuid4()
     path = f"{VIDEO_PATH}{video_id}.mp4"
