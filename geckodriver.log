@@ -1,0 +1,299 @@
+1616993595562	geckodriver	INFO	Listening on 127.0.0.1:56085
+1616993598594	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileJ7A0SQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616993612700	Marionette	INFO	Listening on port 56094
+1616993613202	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 186: TypeError: rule is undefined
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 186: TypeError: rule is undefined
+JavaScript error: resource://devtools/client/inspector/rules/utils/utils.js, line 186: TypeError: rule is undefined
+console.error: (new TypeError("currentNode is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 66))
+TypeError: currentNode is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:66:20
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:358:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2305))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2305))
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: "getLayout@resource://devtools/server/actors/page-style.js:1002:5\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:68:16\n"
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.child1400/pagestyle78 (resource://devtools/server/actors/page-style.js:1002:5)", "resource://devtools/shared/protocol/Front.js", 361))
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2305))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2305))
+JavaScript warning: resource://devtools/client/shared/demangle.js, line 0: Successfully compiled asm.js code (total compilation time 100ms)
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:358:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2305))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2305))
+1616995466940	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:231:19
+TimedPromise@chrome://marionette/content/sync.js:216:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:433:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: asm.js type error: Disabled by debugger
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/WILyFQD-M50.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3fswkLI7sVuxecnmIojWdATpq9PBoWxcBOmr08GhbF_fb36lXE8Wte8PpyJkgi8nVDChx3QpyasyUQMplUtWk, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/WILyFQD-M50.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3fswkLI7sVuxecnmIojWdATpq9PBoWxcBOmr08GhbF_fb36lXE8Wte8PpyJkgi8nVDChx3QpyasyUQMplUtWk, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yc/l/en_US/MlPY3U_ugE6.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEazotterjZ-zTgbBCgFfpt1xlhXy_euhPXGWFfL966E9bfJZsUMMtDk_N04hOaCGBixpW0hHwzfLOYRu4uwfcE, line 1219: unreachable code after return statement
+console.warn: "Could not fetch the source for https://static.xx.fbcdn.net/rsrc.php/v3/yI/l/0,cross/_20JUPKYfEV.css?_nc_x=zdatnDBozZj&_nc_eui2=AeHFYqVpS37iCr1GtJJ_OGYXWE1Yyc__nBVYTVjJz_-cFfVFivL_q8zOiVtZ-EtHZ6osFKWUZ2rFy6N9bzwGdzzy, the editor was destroyed"
+console.error: (new Error("Connection closed, pending request to server0.conn0.child1400/styleSheetsActor4, type getText failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:288:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_getSourceTextAndPrettify@resource://devtools/client/styleeditor/StyleSheetEditor.jsm:292:40\n", "resource://devtools/shared/protocol/Front.js", 99))
+console.warn: "Could not fetch the source for https://static.xx.fbcdn.net/rsrc.php/v3/ys/l/0,cross/fBjQQ7wdBzQ.css?_nc_x=zdatnDBozZj&_nc_eui2=AeExRvJQiXyQ1hFShfn0H2SpjhJuimXcmViOEm6KZdyZWNn6MMrZSnS3nOhW20WupeijA9XcCvLqt3uT-8Lh1Jun, the editor was destroyed"
+console.error: (new Error("Connection closed, pending request to server0.conn0.child1400/styleSheetsActor4, type getText failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:288:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_getSourceTextAndPrettify@resource://devtools/client/styleeditor/StyleSheetEditor.jsm:292:40\n", "resource://devtools/shared/protocol/Front.js", 99))
+console.warn: "Could not fetch the source for https://static.xx.fbcdn.net/rsrc.php/v3/yd/l/0,cross/1YUcfS09yQB.css?_nc_x=zdatnDBozZj&_nc_eui2=AeGV3P3tSvPzru6KP_Rh0NnCmy0EAuyl4y6bLQQC7KXjLq-awzvYhHt2gVPX96pF8pRcd10qEXpB866qG4GgdXUj, the editor was destroyed"
+console.error: (new Error("Connection closed, pending request to server0.conn0.child1400/styleSheetsActor4, type getText failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:288:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_getSourceTextAndPrettify@resource://devtools/client/styleeditor/StyleSheetEditor.jsm:292:40\n", "resource://devtools/shared/protocol/Front.js", 99))
+console.warn: "Could not fetch the source for https://static.xx.fbcdn.net/rsrc.php/v3/ym/l/0,cross/EULOuFUOLfV.css?_nc_x=zdatnDBozZj&_nc_eui2=AeH1wCG0ECGi5rVV9hlsBvnWvms82wggW1G-azzbCCBbUdlMf3Db3lHBHbtMwF2PzNIzRUqGNC0VJYTjtRG_iLoL, the editor was destroyed"
+console.error: (new Error("Connection closed, pending request to server0.conn0.child1400/styleSheetsActor4, type getText failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:288:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_getSourceTextAndPrettify@resource://devtools/client/styleeditor/StyleSheetEditor.jsm:292:40\n", "resource://devtools/shared/protocol/Front.js", 99))
+console.error: (new TypeError("this.browserRequire is not a function", "resource://devtools/client/framework/toolbox.js", 1258))
+console.error: (new TypeError("this.browserRequire is not a function", "resource://devtools/client/framework/toolbox.js", 1258))
+console.error: (new TypeError("this.browserRequire is not a function", "resource://devtools/client/framework/toolbox.js", 1258))
+console.error: (new TypeError("this.browserRequire is not a function", "resource://devtools/client/framework/toolbox.js", 1258))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: (new TypeError("this._seenSheets is null", "resource://devtools/client/styleeditor/StyleEditorUI.jsm", 317))
+console.error: "Tried to send a 'getText' method reply on an already destroyed actor 'stylesheets'"
+console.error: "Tried to send a 'getText' method reply on an already destroyed actor 'stylesheets'"
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:358:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2305))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://business.facebook.com"
+Handler function threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsISeekableStream.tell]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/webconsole/network-helper.js :: readPostTextFromRequest :: line 149"  data: no]
+Stack: readPostTextFromRequest@resource://devtools/shared/webconsole/network-helper.js:149:30
+_onRequestBodySent@resource://devtools/server/actors/network-monitor/network-observer.js:1129:34
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:627:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:740:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 149, column: 0
+console.error: ({})
+1616997508827	Marionette	INFO	Stopped listening on port 56094
+1617037531405	geckodriver	INFO	Listening on 127.0.0.1:50147
+1617037534331	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileZwkbmM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617037549367	Marionette	INFO	Listening on port 50158
+1617037550093	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 8508, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/WILyFQD-M50.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3fswkLI7sVuxecnmIojWdATpq9PBoWxcBOmr08GhbF_fb36lXE8Wte8PpyJkgi8nVDChx3QpyasyUQMplUtWk, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/WILyFQD-M50.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3fswkLI7sVuxecnmIojWdATpq9PBoWxcBOmr08GhbF_fb36lXE8Wte8PpyJkgi8nVDChx3QpyasyUQMplUtWk, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 162ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yc/l/en_US/MlPY3U_ugE6.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEazotterjZ-zTgbBCgFfpt1xlhXy_euhPXGWFfL966E9bfJZsUMMtDk_N04hOaCGBixpW0hHwzfLOYRu4uwfcE, line 1219: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617039918119	Marionette	INFO	Stopped listening on port 50158
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617039929432	geckodriver	INFO	Listening on 127.0.0.1:50637
+1617039932434	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileHJmkXG"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617039936636	Marionette	INFO	Listening on port 50647
+1617039936778	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617040957079	Marionette	INFO	Stopped listening on port 50647
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617041015967	geckodriver	INFO	Listening on 127.0.0.1:50898
+1617041018978	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofile4EQuNa"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617041023234	Marionette	INFO	Listening on port 50906
+1617041023377	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617041035386	Marionette	INFO	Stopped listening on port 50906
+1617041528732	geckodriver	INFO	Listening on 127.0.0.1:51036
+1617041531741	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilerLXNwh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617041535880	Marionette	INFO	Listening on port 51045
+1617041536084	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617041593630	Marionette	INFO	Stopped listening on port 51045
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617041597752	geckodriver	INFO	Listening on 127.0.0.1:51112
+1617041600762	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofile4F3tzg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617041605021	Marionette	INFO	Listening on port 51121
+1617041605137	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617041853268	Marionette	INFO	Stopped listening on port 51121
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617041856957	geckodriver	INFO	Listening on 127.0.0.1:51208
+1617041859967	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileroxjxs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617041864003	Marionette	INFO	Listening on port 51217
+1617041864309	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.facebook.com"
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1617042634390	Marionette	INFO	Stopped listening on port 51217
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617067079939	geckodriver	INFO	Listening on 127.0.0.1:52936
+1617067082972	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileuEmtk7"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617067092345	Marionette	INFO	Listening on port 52945
+1617067093009	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617067312589	Marionette	INFO	Stopped listening on port 52945
+1617067757572	geckodriver	INFO	Listening on 127.0.0.1:53113
+1617067760591	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofile5NKCKW"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617067764688	Marionette	INFO	Listening on port 53121
+1617067764933	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 158ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617067801323	Marionette	INFO	Stopped listening on port 53121
+1617067816862	geckodriver	INFO	Listening on 127.0.0.1:53199
+1617067819871	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilexlGCOj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617067823957	Marionette	INFO	Listening on port 53208
+1617067824215	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 131ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617067847582	Marionette	INFO	Stopped listening on port 53208
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617068120419	geckodriver	INFO	Listening on 127.0.0.1:53327
+1617068123432	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileSXlgbt"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617068127566	Marionette	INFO	Listening on port 53336
+1617068127779	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617068191237	Marionette	INFO	Stopped listening on port 53336
+1617068224511	geckodriver	INFO	Listening on 127.0.0.1:53414
+1617068227522	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileAjzQmZ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617068231767	Marionette	INFO	Listening on port 53425
+1617068231863	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 159ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617068257715	Marionette	INFO	Stopped listening on port 53425
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617068575878	geckodriver	INFO	Listening on 127.0.0.1:53542
+1617068578888	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilevKvOO0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617068583107	Marionette	INFO	Listening on port 53551
+1617068583229	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 178ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617068635457	Marionette	INFO	Stopped listening on port 53551
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617068636569	geckodriver	INFO	Listening on 127.0.0.1:53635
+1617068639586	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilestuMII"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617068643595	Marionette	INFO	Listening on port 53643
+1617068643949	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 176ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617068767079	geckodriver	INFO	Listening on 127.0.0.1:53724
+1617068770088	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofile52Tlc6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617068774153	Marionette	INFO	Listening on port 53733
+1617068774430	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 170ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617068803454	Marionette	INFO	Stopped listening on port 53733
+1617069570850	geckodriver	INFO	Listening on 127.0.0.1:53939
+1617069573870	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileXMsO5t"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617069578066	Marionette	INFO	Listening on port 53947
+1617069578222	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 170ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617069619603	Marionette	INFO	Stopped listening on port 53947
+1617069853484	geckodriver	INFO	Listening on 127.0.0.1:54064
+1617069856495	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilegXRqXP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617069860968	Marionette	INFO	Listening on port 54072
+1617069861449	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617069886492	Marionette	INFO	Stopped listening on port 54072
+1617069967527	geckodriver	INFO	Listening on 127.0.0.1:54148
+1617069970536	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileqM9Tvg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617069974922	Marionette	INFO	Listening on port 54157
+1617069974989	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 163ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617070060647	Marionette	INFO	Stopped listening on port 54157
+1617070061836	geckodriver	INFO	Listening on 127.0.0.1:54240
+1617070064848	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilem8v1nX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617070069045	Marionette	INFO	Listening on port 54251
+1617070069199	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3icfo4/yT/l/en_US/D_goBEntHUo.js?_nc_x=zdatnDBozZj&_nc_eui2=AeG3C-ybTh0u7t-XOTLFKuc-HNip2N6C53Ac2KnY3oLncAcFCMCre0CMM2juMYVsK5gEkqBQ-HlOHkt94-66_o65, line 58: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj&_nc_eui2=AeEPnvy3miwnMXazm1xlTFpxmRCZV945j--ZEJlX3jmP76VBTOAqdzi5WwKf8-5jmmq9CCqjsaxyOQjOW3kudEyV, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj&_nc_eui2=AeF9JVhIDZovsZSHzV-bW6qCbD8ZQvMh--psPxlC8yH76gOhIG4vJ6iRBsn12-93xBVD3gUM8-junkrCFqsb6bc1, line 0: Successfully compiled asm.js code (total compilation time 166ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ih8V4/yG/l/en_US/ELxAdDfcmtu.js?_nc_x=zdatnDBozZj&_nc_eui2=AeFKuYPgXo2ES0wsIyZZ4ZpPNPko1e3WwEs0-SjV7dbAS-d9XikkQ1touimRSUSfM3YdB74uSJ_dPH3Dpkc-gTZp, line 1219: unreachable code after return statement
+1617070167526	Marionette	INFO	Stopped listening on port 54251
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

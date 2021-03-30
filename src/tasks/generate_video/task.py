@@ -9,8 +9,6 @@ TITLE_FONT_SIZE = 30
 FONT_SIZE = 30
 TITLE_FONT_COLOR = 'white'
 
-BGM_PATH = 'assets/music/'
-BGM_PATH += random.choice([x for x in os.listdir("assets/music") if os.path.isfile(os.path.join("assets/music", x))])
 
 STATIC_PATH = 'assets/static.mp4'
 BACKGROUND_PATH = 'assets/black.png'
@@ -32,7 +30,7 @@ def generate_title(text, audio_path,page):
     backGround_clip = ImageClip(page['background'])
     wrapped_text = textwrap.fill(text, width=50)
     txt_clip = TextClip(wrapped_text,fontsize=font_size, font=FONT, color=TITLE_FONT_COLOR, align="west")
-    txt_clip = txt_clip.set_pos("center")
+    txt_clip = txt_clip.set_position("center")
     clip = CompositeVideoClip([backGround_clip, txt_clip])
     clip.audio = audio_clip
     clip.duration = audio_clip.duration
@@ -59,15 +57,15 @@ def generate_clip(post, comment,page):
 
     wrapped_text = textwrap.fill(text, width=70)
     txt_clip = TextClip(wrapped_text,fontsize=font_size, font=FONT, color=TITLE_FONT_COLOR, align="west", interline=2)
-    txt_clip = txt_clip.set_pos("center")
+    txt_clip = txt_clip.set_position("center")
 
     author_clip = TextClip(f"/u/{comment.author}", fontsize=author_font_size, font=FONT, color="lightblue")
     author_pos = (SIZE[0]/2 - txt_clip.size[0]/2, SIZE[1]/2 - txt_clip.size[1]/2 - author_font_size - 10)
-    author_clip = author_clip.set_pos(author_pos)
+    author_clip = author_clip.set_position(author_pos)
 
     score_clip = TextClip(f"{comment.score} puntos", fontsize=author_font_size, font=FONT, color="grey")
     score_pos = (author_pos[0] + author_clip.size[0] + 20, author_pos[1])
-    score_clip = score_clip.set_pos(score_pos)
+    score_clip = score_clip.set_position(score_pos)
 
     #clip = CompositeVideoClip([backGround_clip,alien_clip,logo_clip, txt_clip, author_clip, score_clip]) #With Alien and logo
     clip = CompositeVideoClip([backGround_clip, txt_clip, author_clip, score_clip]) #Without Alien and no logo
@@ -87,6 +85,9 @@ def generate_video_Text(context):
         comment_clip = generate_clip(post, comment,context['page'])
         clips.append(comment_clip)
     video = concatenate_videoclips(clips)
+    BGM_PATH = 'assets/music/'
+    BGM_PATH += random.choice([x for x in os.listdir("assets/music") if os.path.isfile(os.path.join("assets/music", x))])
+
     background_audio_clip = AudioFileClip(BGM_PATH)
     background_audio_clip = afx.audio_loop(background_audio_clip, duration=video.duration)
     background_audio_clip = background_audio_clip.fx(afx.volumex, 0.05)
@@ -117,7 +118,7 @@ def generate_clip_video(video,page):
     if video['width']>950:
         video_clip = video_clip.resize(width=950)
 
-    video_clip = video_clip.fx(afx.volumex,0.35)
+    video_clip = video_clip.fx(afx.volumex,0.01)
 
     text = video['title']
 
@@ -137,7 +138,7 @@ def generate_clip_video(video,page):
     logo_clip = logo_clip.set_position((SIZE[0]-logo_clip.size[0]-50,60))
     #score_clip = TextClip(f"{comment.score} puntos", fontsize=author_font_size, font=FONT, color="grey")
     #score_pos = (author_pos[0] + author_clip.size[0] + 20, author_pos[1])
-    #score_clip = score_clip.set_pos(score_pos)
+    #score_clip = score_clip.set_position(score_pos)
 
     #clip = CompositeVideoClip([backGround_clip,alien_clip,logo_clip, txt_clip, author_clip, score_clip]) #With Alien and logo
     clip = CompositeVideoClip([backGround_clip, video_clip,txt_clip,author_clip,logo_clip]) #Without Alien and no logo
@@ -159,6 +160,9 @@ def generate_video_Video(context):
 
 
     video = concatenate_videoclips(clips)
+    BGM_PATH = 'assets/music/'
+    BGM_PATH += random.choice([x for x in os.listdir("assets/music") if os.path.isfile(os.path.join("assets/music", x))])
+
     background_audio_clip = AudioFileClip(BGM_PATH)
     background_audio_clip = afx.audio_loop(background_audio_clip, duration=video.duration)
     background_audio_clip = background_audio_clip.fx(afx.volumex, 0.1)

@@ -119,7 +119,8 @@ def get_hottest_postText(context):
                         continue
                      if comment_body == "[deleted]":
                         continue
-                     
+                     if comment.author == None:
+                        continue
                      comment_reply = ""
                      chars += comment_body
                          
@@ -130,7 +131,9 @@ def get_hottest_postText(context):
                      if len(chars)>4999:
                         break  
 
-
+                  if len(chars) < 4500:
+                     addPost(context, post)
+                     continue
                   post_data = Post(title, comments)
                   post_data.score = post.score
                   post_data.num_comments = post.num_comments
@@ -166,11 +169,13 @@ def downloadVideo(url):
    reddit.path = 'C:\\Users\\Erick\\projects\\auddit_extension\\data\\video\\tmp_video'
    reddit.url = url
    while True:
-      time.sleep(3)
+      time.sleep(5)
       path =reddit.download()
       if str(path).endswith('.mp4') or str(path).endswith('.gif'):
          break
-      print("Retrying Download...")
+      if path == 2:
+         raise Exception("Video already downloaded!, clear tmp_video folder")
+      print(f"Retrying Download... response: {path} from url: {url}")
    print("Video Downloaded!")
    return path
 
@@ -201,7 +206,7 @@ def get_hottest_postVideo(context):
                   post_info['author'] = post.author.name
                   post_info['title'] = spanishTranslateAzure(post_info['title'])
                   post_info['permalink'] = post.permalink
-
+                  post_info['duration'] = post.media['reddit_video']['duration'] 
 
                   video_url = 'https://www.reddit.com'+post.permalink
                   post_info['video_path'] =downloadVideo(video_url)
@@ -217,7 +222,7 @@ def get_hottest_postVideo(context):
                   if duration >250:
                      break
          context['post'] = post_data
-
+         context['post'] = sorted(context['post'], key=lambda k: k['duration']) 
       except prawcore.exceptions.RequestException:
          print(f"Retrying: get hottest post")
          time.sleep(5)

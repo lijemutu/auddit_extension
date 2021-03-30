@@ -27,9 +27,9 @@ class TestVideo(unittest.TestCase):
                         'title':'Video de prueba',
                         'author':'test',
                         'permalink':'test',
-                        'video_path':'C:\\Users\\erick\\projects\\auddit\\test\\test_videos\\seconds20height720width576.mp4',
+                        'video_path':'C:\\Users\\erick\\projects\\auddit\\test\\test_videos\\to_test2.mp4',
                         'score':1,
-                        'width':576,
+                        'width':720,
                         'height':720
                     }
                 ]
