@@ -14,14 +14,14 @@ class Pipeline:
                 tts,
                 generate_video,
                 generate_thumbnail,
-                #upload_video
+                upload_video,
                 cleanup
             ]
         else:
              self.tasks = [
                 get_hottest_post,
                 generate_video,
-                #upload_video
+                upload_video,
                 cleanup
             ]
         self.context = dict()
@@ -35,8 +35,8 @@ class Pipeline:
 
 
 if __name__ == "__main__":
-    paginas =['next_level_videos','redditVideos','preguntasRedditColombia','preguntas_reddit_mex']
-    #paginas =['preguntas_reddit_mex','preguntasRedditColombia']
+    #paginas =['next_level_videos','redditVideos','preguntasRedditColombia','preguntas_reddit_mex']
+    paginas =['preguntasRedditColombia','preguntas_reddit_mex']
 
     for pagina in paginas:
         with open('doc/'+pagina+'.json') as page:

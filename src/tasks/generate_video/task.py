@@ -19,6 +19,8 @@ ALIEN_PATH += random.choice([x for x in os.listdir("assets/reddit aliens") if os
 SIZE = (1280, 720)
 BG_COLOR = (16,16,16)
 VIDEO_PATH = "data/video/"
+VIDEO_PATH_EXTERNAL = "\\data\\video\\"
+
 FONT = 'Franklin-Gothic-Medium'
 
 
@@ -94,7 +96,8 @@ def generate_video_Text(context):
     video.audio = CompositeAudioClip([video.audio, background_audio_clip])
     video_id = uuid.uuid4()
     path = f"{VIDEO_PATH}{video_id}.mp4"
-    context["video_path"] = path
+    externalPath = f"{os.getcwd()}{VIDEO_PATH_EXTERNAL}{video_id}.mp4"
+    context["video_path"] = externalPath
     context["video_id"] = video_id
     video.write_videofile(path, fps=24, codec='libx264', threads=4)
     video.close()
@@ -169,7 +172,8 @@ def generate_video_Video(context):
     video.audio = CompositeAudioClip([video.audio, background_audio_clip])
     video_id = uuid.uuid4()
     path = f"{VIDEO_PATH}{video_id}.mp4"
-    context["video_path"] = path
+    externalPath = f"{os.getcwd()}{VIDEO_PATH_EXTERNAL}{video_id}.mp4"
+    context["video_path"] = externalPath
     context["video_id"] = video_id
     video.write_videofile(path, fps=24, codec='libx264', threads=4)
     video.close()

@@ -1,8 +1,9 @@
 from PIL import Image, ImageDraw, ImageFont
 from textwrap import fill
 from googletrans import Translator
+import os
 
-THUMBNAIL_DIR = "data/thumbnails/"
+THUMBNAIL_DIR = "\\data\\thumbnails\\"
 THUMBNAIL_DIMENSION = (640, 360)
 GOLD = Image.open("./assets/gold_32.png")
 PLATINUM = Image.open("./assets/platinum_32.png")
@@ -67,6 +68,6 @@ def generate_thumbnail(context):
     draw.text(comment_count_offset, num_comments, font=font3, fill=(128, 128, 128))
 
     video_id = context["video_id"]
-    thumbnail_path = f"{THUMBNAIL_DIR}{video_id}.png"
+    thumbnail_path = f"{os.getcwd()}{THUMBNAIL_DIR}{video_id}.png"
     thumbnail.save(thumbnail_path)
     context["thumbnail_path"] = thumbnail_path
