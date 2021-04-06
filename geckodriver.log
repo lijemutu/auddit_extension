@@ -541,3 +541,164 @@ console.log: WebExtensions: reset-default-search: No addons in our list are inst
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1617297407365	geckodriver	INFO	Listening on 127.0.0.1:56395
+1617297410332	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilejNDa7H"
+1617297449125	geckodriver	INFO	Listening on 127.0.0.1:56469
+1617297452144	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilesqh4hn"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617297456503	Marionette	INFO	Listening on port 56478
+1617297456871	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yC/l/en_US/R7nUB9dHELy.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yS/l/en_US/kIm9buYLaV6.js?_nc_x=zdatnDBozZj, line 1216: unreachable code after return statement
+1617297589076	Marionette	INFO	Stopped listening on port 56478
+1617297590736	geckodriver	INFO	Listening on 127.0.0.1:56625
+1617297593746	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofile3dcBlK"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617297598290	Marionette	INFO	Listening on port 56634
+1617297598683	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yC/l/en_US/R7nUB9dHELy.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yS/l/en_US/kIm9buYLaV6.js?_nc_x=zdatnDBozZj, line 1216: unreachable code after return statement
+1617297727830	Marionette	INFO	Stopped listening on port 56634
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xB60006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617297831073	geckodriver	INFO	Listening on 127.0.0.1:56816
+1617297834083	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileBVdNhn"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617297838684	Marionette	INFO	Listening on port 56826
+1617297839021	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yC/l/en_US/R7nUB9dHELy.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yS/l/en_US/kIm9buYLaV6.js?_nc_x=zdatnDBozZj, line 1216: unreachable code after return statement
+1617297900470	Marionette	INFO	Stopped listening on port 56826
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xB60006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+1617298065181	geckodriver	INFO	Listening on 127.0.0.1:57025
+1617298068191	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileJcNX2l"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617298072482	Marionette	INFO	Listening on port 57035
+1617298072535	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yC/l/en_US/R7nUB9dHELy.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yS/l/en_US/kIm9buYLaV6.js?_nc_x=zdatnDBozZj, line 1216: unreachable code after return statement
+1617298128326	Marionette	INFO	Stopped listening on port 57035
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xB60006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617308446887	geckodriver	INFO	Listening on 127.0.0.1:62501
+1617308449893	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofilev52qEs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617308454170	Marionette	INFO	Listening on port 62510
+1617308454235	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yC/l/en_US/R7nUB9dHELy.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/y8/l/en_US/4mRMPhO9HvZ.js?_nc_x=zdatnDBozZj, line 1216: unreachable code after return statement
+1617308586699	Marionette	INFO	Stopped listening on port 62510
+1617310206116	geckodriver	INFO	Listening on 127.0.0.1:63392
+1617310209121	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofile9eY2Bh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617310213436	Marionette	INFO	Listening on port 63401
+1617310213472	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yC/l/en_US/R7nUB9dHELy.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/y8/l/en_US/4mRMPhO9HvZ.js?_nc_x=zdatnDBozZj, line 1216: unreachable code after return statement
+1617310413518	Marionette	INFO	Stopped listening on port 63401
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0143,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xB60006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+1617314554770	geckodriver	INFO	Listening on 127.0.0.1:49331
+1617314557776	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileJeMBFg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617314562042	Marionette	INFO	Listening on port 49340
+1617314562111	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yf/l/en_US/xowicwDkp6c.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj, line 0: Successfully compiled asm.js code (total compilation time 152ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/ye/l/en_US/g9f4z-dsTHB.js?_nc_x=zdatnDBozZj, line 1206: unreachable code after return statement
+1617314918260	Marionette	INFO	Stopped listening on port 49340
+1617314926662	geckodriver	INFO	Listening on 127.0.0.1:49587
+1617314929671	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileb3NIer"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617314933777	Marionette	INFO	Listening on port 49596
+1617314934007	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/yf/l/en_US/xowicwDkp6c.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj, line 0: Successfully compiled asm.js code (total compilation time 149ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/ye/l/en_US/g9f4z-dsTHB.js?_nc_x=zdatnDBozZj, line 1206: unreachable code after return statement
+1617315026207	Marionette	INFO	Stopped listening on port 49596
+1617384275146	geckodriver	INFO	Listening on 127.0.0.1:49982
+1617384278168	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileVxlTwx"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617384290108	Marionette	INFO	Listening on port 49990
+1617384290492	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/y3/l/en_US/4O_1mtZ09Az.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj, line 0: Successfully compiled asm.js code (total compilation time 149ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yw/l/en_US/JZiSmbssbj5.js?_nc_x=zdatnDBozZj, line 1206: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617385043071	Marionette	INFO	Stopped listening on port 49990
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+?" (new Error("", "(unknown module)"))
+1617384555195	Marionette	INFO	Listening on port 50108
+1617384555458	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/y3/l/en_US/4O_1mtZ09Az.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj, line 0: Successfully compiled asm.js code (total compilation time 155ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yw/l/en_US/JZiSmbssbj5.js?_nc_x=zdatnDBozZj, line 1206: unreachable code after return statement
+1617384612167	Marionette	INFO	Stopped listening on port 50108
+1617384618868	geckodriver	INFO	Listening on 127.0.0.1:50183
+1617384621887	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileqzEhyE"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617384626100	Marionette	INFO	Listening on port 50193
+1617384626238	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/y3/l/en_US/4O_1mtZ09Az.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj, line 0: Successfully compiled asm.js code (total compilation time 163ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yw/l/en_US/JZiSmbssbj5.js?_nc_x=zdatnDBozZj, line 1206: unreachable code after return statement
+1617384774223	geckodriver	INFO	Listening on 127.0.0.1:50286
+1617384777241	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Erick\\AppData\\Local\\Temp\\rust_mozprofileEjlvlg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617384781270	Marionette	INFO	Listening on port 50294
+1617384781653	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3irD14/y3/l/en_US/4O_1mtZ09Az.js?_nc_x=zdatnDBozZj, line 57: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 35: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/gMrT0H09uxw.js?_nc_x=zdatnDBozZj, line 39: unreachable code after return statement
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i3T94/yo/l/en_US/IQj02C4U7Zh.js?_nc_x=zdatnDBozZj, line 0: Successfully compiled asm.js code (total compilation time 152ms)
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3ipGc4/yw/l/en_US/JZiSmbssbj5.js?_nc_x=zdatnDBozZj, line 1206: unreachable code after return statement

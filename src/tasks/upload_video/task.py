@@ -56,8 +56,9 @@ class  facebookVideoUpload:
                 pyautogui.write(videopath)
                 time.sleep(2)
                 pyautogui.press('enter')
-                
                 self.pages_list = self.locateElements("/html/body/div[5]/div/div/div/div[1]/div/div[2]/div/div[2]/div/*/div/div/div/span/div")
+                #self.pages_list = self.locateElements("/html/body/div[5]/div/div/div/div[1]/div/div[2]/div/div[2]")
+
                 for page in self.pages_list:
                         if page.text == pageName:
                                 page.click()

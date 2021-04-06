@@ -40,6 +40,7 @@ def save_tts(text):
       #   print("Speech synthesized to speaker for text [{}]".format(text))
       elif result.reason == ResultReason.Canceled:
          cancellation_details = result.cancellation_details
+         print(f"The text provided was: {textModified}")
          print("Speech synthesis canceled: {}".format(cancellation_details.error_details))
          if cancellation_details.reason == CancellationReason.Error:
             if cancellation_details.error_details:
