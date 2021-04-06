@@ -165,7 +165,7 @@ def generate_video_Video(context):
 
     background_audio_clip = AudioFileClip(BGM_PATH)
     background_audio_clip = afx.audio_loop(background_audio_clip, duration=video.duration)
-    background_audio_clip = background_audio_clip.fx(afx.volumex, 0.1)
+    background_audio_clip = background_audio_clip.fx(afx.volumex, 0.15)
     video.audio = CompositeAudioClip([video.audio, background_audio_clip])
     video_id = uuid.uuid4()
     path = f"{VIDEO_PATH}{video_id}.mp4"

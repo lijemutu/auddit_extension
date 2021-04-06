@@ -103,7 +103,7 @@ def get_hottest_postText(context):
                            continue
                      if comment.edited:
                            continue
-                     if len(comment.body) > 1000:
+                     if len(comment.body) > 700:
                            continue
                      if comment.score < 50:
                            continue
@@ -128,10 +128,10 @@ def get_hottest_postText(context):
                      comment_output.author = comment.author.name
                      comment_output.score = comment.score
                      comments.append(comment_output)
-                     if len(chars)>4999:
+                     if len(chars)>3999:
                         break  
 
-                  if len(chars) < 4500:
+                  if len(chars) < 3500:
                      addPost(context, post)
                      continue
                   post_data = Post(title, comments)

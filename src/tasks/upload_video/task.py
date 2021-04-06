@@ -77,6 +77,7 @@ class  facebookVideoUpload:
                         self.tags_text.send_keys(Keys.RETURN)
                         time.sleep(2)
         def addThumbnail(self,thumbnailPath):
+                #TODO locate element not workinsg sometimes
                 self.thumbnailButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]")
                 self.thumbnailButton.click()
 
