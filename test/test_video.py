@@ -69,3 +69,36 @@ class TestVideo(unittest.TestCase):
         clip = generate_clip_video(video,page)
         clip.write_videofile(path, fps=24, codec='libx264', threads=16)
 
+    def test_clips(self):
+
+        pageName = 'redditVideos'
+        with open('doc/'+pageName+'.json') as page:
+            page = json.load(page)
+            ctx = {
+                "nsfw": False,
+                "comment_limit": 4,
+                "page": page
+            }
+            test_videos = [
+                    {
+                        'title':'Video de prueba',
+                        'author':'test',
+                        'permalink':'test',
+                        'video_path':'C:\\Users\\erick\\projects\\auddit_extension\\test\\test_videos\\temp2.mp4',
+                        'score':1,
+                        'width':332,
+                        'height':720
+                    },
+                    {
+                        'title':'Video de prueba',
+                        'author':'test',
+                        'permalink':'test',
+                        'video_path':'C:\\Users\\erick\\projects\\auddit_extension\\test\\test_videos\\temp1.mp4',
+                        'score':1,
+                        'width':332,
+                        'height':720
+                    }
+                ]
+            
+            ctx['post'] = test_videos
+            generate_video(ctx)
