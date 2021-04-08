@@ -81,7 +81,7 @@ class TestVideo(unittest.TestCase):
             }
             test_videos = [
                     {
-                        'title':'Video de prueba',
+                        'title':'Video de prueba con un texto bien pinche largo alv compa no mames que pedos jajajajssjsjsj a te pasaste devergaaaa',
                         'author':'test',
                         'permalink':'test',
                         'video_path':'C:\\Users\\erick\\projects\\auddit_extension\\test\\test_videos\\temp2.mp4',
@@ -89,15 +89,7 @@ class TestVideo(unittest.TestCase):
                         'width':332,
                         'height':720
                     },
-                    {
-                        'title':'Video de prueba',
-                        'author':'test',
-                        'permalink':'test',
-                        'video_path':'C:\\Users\\erick\\projects\\auddit_extension\\test\\test_videos\\temp1.mp4',
-                        'score':1,
-                        'width':332,
-                        'height':720
-                    }
+
                 ]
             
             ctx['post'] = test_videos

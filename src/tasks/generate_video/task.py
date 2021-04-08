@@ -114,12 +114,20 @@ def generate_clip_video(video,page):
     print(video['video_path'])
     video_clip = VideoFileClip(video['video_path'])
     video_clip = video_clip.set_position(("center"))
-    # Width
-    if video_clip.size[0] < 639 or video_clip.size[0]> 639:
-        video_clip = video_clip.resize(width=639)
     # Height
-    if video_clip.size[1]>916:    
-        video_clip = video_clip.resize(height=916)
+    if video_clip.size[1]>1353 :    
+        video_clip = video_clip.resize(height=1353)
+    # Width
+    if video_clip.size[0]> 864:
+        video_clip = video_clip.resize(width=864)
+
+    if video_clip.size[1]<500 :    
+        video_clip = video_clip.resize(height=700) 
+
+    if video_clip.size[0]< 300:
+        video_clip = video_clip.resize(width=650)
+
+    
 
 
     video_clip = video_clip.fx(afx.volumex,0.01)
@@ -129,17 +137,20 @@ def generate_clip_video(video,page):
     font_size = 30
     author_font_size = 20
 
-    wrapped_text = textwrap.fill(text, width=50)
+    wrapped_text = textwrap.fill(text, width=40)
     txt_clip = TextClip(wrapped_text,fontsize=font_size, font=FONT, color=TITLE_FONT_COLOR, align="center", interline=2)
     txt_clip = txt_clip.set_position((backGround_clip.size[0]/2-txt_clip.size[0]/2,10))
 
     author_clip = TextClip(f"by: /u/{video['author']}", fontsize=author_font_size, font=FONT, color=TITLE_FONT_COLOR)
-    author_pos = (backGround_clip.size[0]/2 + txt_clip.size[0]/2, txt_clip.size[1])
+    #author_pos = (backGround_clip.size[0]/2 + txt_clip.size[0]/2-45, txt_clip.size[1])
+    author_pos = (backGround_clip.size[0]/2 - txt_clip.size[0]/2, txt_clip.size[1])
+    
+
     author_clip = author_clip.set_position(author_pos)
 
     logo_clip = ImageClip(page['logo'])
     logo_clip = logo_clip.resize((125,125))
-    logo_clip = logo_clip.set_position((backGround_clip.size[0]-logo_clip.size[0]-50,60))
+    logo_clip = logo_clip.set_position((backGround_clip.size[0]-logo_clip.size[0]-50,90))
 
     clip = CompositeVideoClip([backGround_clip, video_clip,txt_clip,author_clip,logo_clip])
 
