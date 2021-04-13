@@ -115,17 +115,17 @@ def generate_clip_video(video,page):
     video_clip = VideoFileClip(video['video_path'])
     video_clip = video_clip.set_position(("center"))
     # Height
-    if video_clip.size[1]>1353 :    
-        video_clip = video_clip.resize(height=1353)
+    if video_clip.size[1]>530 :    
+        video_clip = video_clip.resize(height=530)
     # Width
-    if video_clip.size[0]> 864:
-        video_clip = video_clip.resize(width=864)
+    if video_clip.size[0]> 600:
+        video_clip = video_clip.resize(width=600)
 
-    if video_clip.size[1]<500 :    
-        video_clip = video_clip.resize(height=700) 
+    if video_clip.size[1]<400 :    
+        video_clip = video_clip.resize(height=530) 
 
     if video_clip.size[0]< 300:
-        video_clip = video_clip.resize(width=650)
+        video_clip = video_clip.resize(width=600)
 
     
 
@@ -137,7 +137,7 @@ def generate_clip_video(video,page):
     font_size = 30
     author_font_size = 20
 
-    wrapped_text = textwrap.fill(text, width=40)
+    wrapped_text = textwrap.fill(text, width=30)
     txt_clip = TextClip(wrapped_text,fontsize=font_size, font=FONT, color=TITLE_FONT_COLOR, align="center", interline=2)
     txt_clip = txt_clip.set_position((backGround_clip.size[0]/2-txt_clip.size[0]/2,10))
 
@@ -150,7 +150,7 @@ def generate_clip_video(video,page):
 
     logo_clip = ImageClip(page['logo'])
     logo_clip = logo_clip.resize((125,125))
-    logo_clip = logo_clip.set_position((backGround_clip.size[0]-logo_clip.size[0]-50,90))
+    logo_clip = logo_clip.set_position((backGround_clip.size[0]-logo_clip.size[0]-10,30))
 
     clip = CompositeVideoClip([backGround_clip, video_clip,txt_clip,author_clip,logo_clip])
 
@@ -158,7 +158,7 @@ def generate_clip_video(video,page):
     clip.duration = video_clip.duration
     static_clip = VideoFileClip(STATIC_PATH)
     static_clip = static_clip.fx(afx.volumex, 0.15)
-    clip = concatenate_videoclips([clip, static_clip])
+    clip = concatenate_videoclips([clip, static_clip],method='compose')
     return clip
 
 def generate_video_Video(context):
@@ -170,7 +170,7 @@ def generate_video_Video(context):
         clips.append(comment_clip)
 
 
-    video = concatenate_videoclips(clips)
+    video = concatenate_videoclips(clips,method='compose')
     BGM_PATH = 'assets/music/'
     BGM_PATH += random.choice([x for x in os.listdir("assets/music") if os.path.isfile(os.path.join("assets/music", x))])
 

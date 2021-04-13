@@ -71,7 +71,7 @@ class TestVideo(unittest.TestCase):
 
     def test_clips(self):
 
-        pageName = 'redditVideos'
+        pageName = 'next_level_videos'
         with open('doc/'+pageName+'.json') as page:
             page = json.load(page)
             ctx = {
@@ -84,11 +84,20 @@ class TestVideo(unittest.TestCase):
                         'title':'Video de prueba con un texto bien pinche largo alv compa no mames que pedos jajajajssjsjsj a te pasaste devergaaaa',
                         'author':'test',
                         'permalink':'test',
-                        'video_path':'C:\\Users\\erick\\projects\\auddit_extension\\test\\test_videos\\temp2.mp4',
+                        'video_path':'C:\\Users\\erick\\projects\\auddit_extension\\test\\test_videos\\seconds20height720width576.mp4',
                         'score':1,
                         'width':332,
                         'height':720
                     },
+                    {
+                        'title':'Video de prueba con un texto bien pinche largo alv compa no mames que pedos jajajajssjsjsj a te pasaste devergaaaa',
+                        'author':'test',
+                        'permalink':'test',
+                        'video_path':'C:\\Users\\erick\\projects\\auddit_extension\\test\\test_videos\\temp2.mp4',
+                        'score':1,
+                        'width':332,
+                        'height':720
+                    }
 
                 ]
             
