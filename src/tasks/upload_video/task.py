@@ -6,13 +6,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
-import pyautogui,time,random
+import time,random
 
 
 
 class  facebookVideoUpload:
         def __init__(self) -> None:
-                self.driver = webdriver.Firefox(executable_path="C:\\Users\\Erick\\projects\\auddit_extension\\bin\\geckodriver.exe")
+                self.driver = webdriver.Firefox(executable_path="bin/geckodriver.exe")
                 self.driver.get("https://business.facebook.com/creatorstudio/home")
                 self.login_button =self.locateElement("/html/body/div/div[1]/div[2]/div/div[2]/div/div/div/div[2]/div/div")
                 self.login_button.click()
@@ -30,7 +30,20 @@ class  facebookVideoUpload:
                 except:
                         raise Exception(f"Buttons not found on Xpath: {xpath}")
                 return elements
+        def locateElementCSS(self,css):
+                try:
+                        element = WebDriverWait(self.driver,25).until(EC.presence_of_element_located((By.CSS_SELECTOR,css)))
+                except:
+                        raise Exception(f"Button not found on CSS selector: {css}")
+                return element
 
+        def locateElementsCSS(self,css):
+                ignored_exceptions=(NoSuchElementException,StaleElementReferenceException)
+                try:
+                        elements = WebDriverWait(self.driver,10,ignored_exceptions=ignored_exceptions).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,css)))
+                except:
+                        raise Exception(f"Buttons not found on Xpath: {xpath}")
+                return elements
         def checkText(self,xpath,text):
                 try:
                         WebDriverWait(self.driver,20).until(EC.text_to_be_present_in_element((By.XPATH,xpath),text))
@@ -47,15 +60,22 @@ class  facebookVideoUpload:
                 self.send_credentials.click()
 
         def startUpload(self,videopath,pageName):
-                self.upload_video_button = self.locateElement("/html/body/div[1]/div[1]/div/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/div/div/div/div[1]/div[2]/div[3]/div/div[1]/div")
-                self.upload_video_button.click()
+                #self.upload_video_button = self.locateElement("/html/body/div[1]/div[1]/div/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/div/div/div/div[1]/div[2]/div[3]/div/div[1]/div")
+                #self.upload_video_button.click()
 
-                self.upload_single_video = self.locateElement("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div/div/div[1]/div/div/ul/li[1]")
-                self.upload_single_video.click()
-                time.sleep(1)
-                pyautogui.write(videopath)
-                time.sleep(2)
-                pyautogui.press('enter')
+                #self.upload_single_video = self.locateElement("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div/div/div[1]/div/div/ul/li[1]")
+                #self.upload_single_video.click()
+                #time.sleep(1)
+                #pyautogui.write(videopath)
+                #time.sleep(2)
+                #pyautogui.press('enter')
+                try:
+                        upload_single_video = self.locateElementCSS("input[accept='video/*'][type='file']")
+                        upload_single_video.send_keys(videopath)
+
+                except:
+                        raise Exception("css uploader selector changed!!")
+
                 self.pages_list = self.locateElements("/html/body/div[5]/div/div/div/div[1]/div/div[2]/div/div[2]/div/*/div/div/div/span/div")
                 #self.pages_list = self.locateElements("/html/body/div[5]/div/div/div/div[1]/div/div[2]/div/div[2]")
 
@@ -80,13 +100,19 @@ class  facebookVideoUpload:
                 #TODO locate element not workinsg sometimes
                 self.thumbnailButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]")
                 self.thumbnailButton.click()
+                try:
+                        upload_single_video = self.locateElementCSS("input[accept='.png,.jpg,.jpeg'][type='file']")
+    
+                        upload_single_video.send_keys(thumbnailPath)
 
-                self.addImageButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[4]/div[2]/a/div")
-                self.addImageButton.click()
-                time.sleep(1)
-                pyautogui.write(thumbnailPath)
-                time.sleep(2)
-                pyautogui.press('enter')
+                except:
+                        raise Exception("css thumbnail selector changed!!")
+                #self.addImageButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[4]/div[2]/a/div")
+                #self.addImageButton.click()
+                #time.sleep(1)
+                #pyautogui.write(thumbnailPath)
+                #time.sleep(2)
+                #pyautogui.press('enter')
 
         def publishVideo(self,publishNow=True,date=None):
                 self.publishOptions = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[1]/div[2]/div/div")
