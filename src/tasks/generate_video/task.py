@@ -11,6 +11,7 @@ TITLE_FONT_COLOR = 'white'
 
 
 STATIC_PATH = 'assets/static.mp4'
+STATIC_PATH_HD = 'assets/static_hd.mp4'
 BACKGROUND_PATH = 'assets/black.png'
 
 ALIEN_PATH = 'assets/reddit aliens/'
@@ -36,7 +37,7 @@ def generate_title(text, audio_path,page):
     clip = CompositeVideoClip([backGround_clip, txt_clip])
     clip.audio = audio_clip
     clip.duration = audio_clip.duration
-    static_clip = VideoFileClip(STATIC_PATH)
+    static_clip = VideoFileClip(STATIC_PATH_HD)
     static_clip = static_clip.fx(afx.volumex, 0.15)
     clip = concatenate_videoclips([clip, static_clip])
     
@@ -74,7 +75,7 @@ def generate_clip(post, comment,page):
 
     clip.audio = audio_clip
     clip.duration = audio_clip.duration
-    static_clip = VideoFileClip(STATIC_PATH)
+    static_clip = VideoFileClip(STATIC_PATH_HD)
     static_clip = static_clip.fx(afx.volumex, 0.15)
     clip = concatenate_videoclips([clip, static_clip])
     return clip
@@ -178,6 +179,21 @@ def generate_video_Video(context):
     background_audio_clip = afx.audio_loop(background_audio_clip, duration=video.duration)
     background_audio_clip = background_audio_clip.fx(afx.volumex, 0.15)
     video.audio = CompositeAudioClip([video.audio, background_audio_clip])
+    video_id = uuid.uuid4()
+    path = f"{VIDEO_PATH}{video_id}.mp4"
+    externalPath = f"{os.getcwd()}{VIDEO_PATH_EXTERNAL}{video_id}.mp4"
+    context["video_path"] = externalPath
+    context["video_id"] = video_id
+    video.write_videofile(path, fps=24, codec='libx264', threads=4)
+    video.close()
+
+def generate_tiktok(context):
+    videos = context["post"]
+    clips = []
+    for video in videos:
+        video_clip = VideoFileClip(video['video_path'])
+        clips.append(video_clip)
+    video = concatenate_videoclips(clips,method='compose')
     video_id = uuid.uuid4()
     path = f"{VIDEO_PATH}{video_id}.mp4"
     externalPath = f"{os.getcwd()}{VIDEO_PATH_EXTERNAL}{video_id}.mp4"

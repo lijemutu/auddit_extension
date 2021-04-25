@@ -60,33 +60,29 @@ class  facebookVideoUpload:
                 self.send_credentials.click()
 
         def startUpload(self,videopath,pageName):
-                #self.upload_video_button = self.locateElement("/html/body/div[1]/div[1]/div/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div[1]/div/div/div/div[1]/div[2]/div[3]/div/div[1]/div")
-                #self.upload_video_button.click()
 
-                #self.upload_single_video = self.locateElement("/html/body/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div/div/div[1]/div/div/ul/li[1]")
-                #self.upload_single_video.click()
-                #time.sleep(1)
-                #pyautogui.write(videopath)
-                #time.sleep(2)
-                #pyautogui.press('enter')
                 try:
-                        upload_single_video = self.locateElementCSS("input[accept='video/*'][type='file']")
+                        upload_single_video = self.locateElementCSS("input[accept='video/*, video/x-m4v, video/webm, video/x-ms-wmv, video/x-msvideo, video/3gpp, video/flv, video/x-flv, video/mp4, video/quicktime, video/mpeg, video/ogv, .ts, .mkv'][type='file']")
                         upload_single_video.send_keys(videopath)
 
                 except:
-                        raise Exception("css uploader selector changed!!")
+                        raise Exception("css uploader selector changed!! or video not found")
 
-                self.pages_list = self.locateElements("/html/body/div[5]/div/div/div/div[1]/div/div[2]/div/div[2]/div/*/div/div/div/span/div")
-                #self.pages_list = self.locateElements("/html/body/div[5]/div/div/div/div[1]/div/div[2]/div/div[2]")
+                self.pages_list = self.locateElements("/html/body/div[4]/div/div/div/div[1]/div/div[2]/div/div[2]/div/*")
+                                                        
 
                 for page in self.pages_list:
                         if page.text == pageName:
                                 page.click()
                                 break
         def title_description_tags(self,title,description,tags):
-                self.title_text = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div[2]/label/input")
-                self.description_text = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[2]/div[2]/div/div[1]/div[2]/div/div/div[2]/div")
-                self.tags_text = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div[1]/div/div[2]/div/span[2]/label/input")
+                
+                self.title_text = self.locateElementCSS("input[type='text'][placeholder='Add a title for your video here...']")
+                # TODO ESTE DE ABAJO SI ES, .notranslate > div:nth-child(1) ESTE ES SU SELECTOR CSS Y EL HTML div data-contents = 'true'
+                self.description_text = self.locateElementCSS(".notranslate")
+                                                           
+                                                            
+                self.tags_text = self.locateElementCSS("input[aria-label='Add keywords to help people find your video']")
                 
                 self.title_text.send_keys(title)
                 self.description_text.send_keys(description)
@@ -97,52 +93,52 @@ class  facebookVideoUpload:
                         self.tags_text.send_keys(Keys.RETURN)
                         time.sleep(2)
         def addThumbnail(self,thumbnailPath):
-                #TODO locate element not workinsg sometimes
-                self.thumbnailButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]")
-                self.thumbnailButton.click()
+
+                thumbnailButtonChildren = self.locateElementCSS("div[loadingindicatorstyle='none'][style='width: 128px; height: 72px;']")
+                thumbnailButton =  WebDriverWait(thumbnailButtonChildren,10).until(EC.element_to_be_clickable((By.XPATH,'..')))
+                thumbnailButton.click()
                 try:
                         upload_single_video = self.locateElementCSS("input[accept='.png,.jpg,.jpeg'][type='file']")
     
                         upload_single_video.send_keys(thumbnailPath)
 
                 except:
-                        raise Exception("css thumbnail selector changed!!")
-                #self.addImageButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[4]/div[2]/a/div")
-                #self.addImageButton.click()
-                #time.sleep(1)
-                #pyautogui.write(thumbnailPath)
-                #time.sleep(2)
-                #pyautogui.press('enter')
+                        raise Exception("css thumbnail selector changed!! or thumbnail not found")
 
-        def publishVideo(self,publishNow=True,date=None):
-                self.publishOptions = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[1]/div[2]/div/div")
+
+        def publishVideo(self,publishNow=True,date=None,playlistName=''):
+
+                self.publishOptions = self.locateElement("//div[contains(text(), '2. Publishing Options')]")
                 self.publishOptions.click()
 
-                self.publishNowButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div[2]/div/div[1]/div")
-                self.schedule = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div[2]/div/div[2]/div")
+                self.publishNowButton = self.locateElement("//div[contains(text(), 'Publish now')]")
+                self.schedule = self.locateElement("//div[contains(text(), 'Schedule')]")
 
                 if publishNow == True:
                         self.publishNowButton.click()
-                        self.playlist = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/div/div/div[3]/div[3]/div[2]")
+                        self.playlist = self.locateElement("//span[contains(text(), 'Choose playlist(s)')]")
                         self.playlist.click()
                         try:
-                                self.playlistSelect = self.locateElement("/html/body/div[8]/div/div/div/div/div/div[1]/div/div/ul/li[1]/div")
+                                self.playlistSelect = self.locateElement(f"//div[contains(text(), '{playlistName}')]")
                         except:
-                                try:
-                                        self.playlistSelect = self.locateElement("/html/body/div[9]/div/div/div/div/div/div[1]/div/div/ul/li[1]/div")
-                                except:
-                                        raise Exception("Playlist not found")
+                                raise Exception("Playlist not found")
                         self.playlistSelect.click()
-                        self.uploadBar = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[3]/div[1]/div[1]/div/div/div[2]")
-                        self.publishButton = self.locateElement("/html/body/div[5]/div/div/div/div[2]/div/div/div[3]/div[2]/a[2]")
+                        
+                        self.publishButton = self.locateElement("//div[contains(text(), 'Publish') and not(contains(text(), 'You') or contains(text(), 'now') or contains(text(), 'Options'))]")
                         while True:
-                                if self.uploadBar.text == "Video Uploaded":
+
+                                try:
+                                        self.uploadBar = self.locateElement("//div[contains(text(), 'Video Uploaded')]")
                                         self.publishButton.click()
                                         time.sleep(3.5)
                                         self.driver.close()
                                         break
-                                else:
+                                except:
                                         time.sleep(2)
+                                
+                                        
+                                
+                                        
 
 
 
@@ -157,4 +153,4 @@ def upload_video(context):
                 uploader.addThumbnail(context["thumbnail_path"])
         else:
                uploader.title_description_tags(title="No creeras lo que pasó!",description=randomDescription,tags=context['page']['tags']) 
-        uploader.publishVideo()
+        uploader.publishVideo(playlistName=context['page']['playlist'])

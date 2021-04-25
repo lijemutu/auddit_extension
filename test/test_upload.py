@@ -22,15 +22,16 @@ class TestReddit(unittest.TestCase):
             'page':{
                 'Nombre':"Next level videos",
                 'thumbnail': True,
-                'description':['Y a ti te ha pasado eso?','Cuentanos tu experiencia y dejanos un like', 'Sigue nuestra página para ver más contenido así :D'],
-                'tags':['Amor','Meme','Chistes','Divertido','Reddit']
+                'description':['Y a ti te ha pasado eso? \nIngresa mi codigo para que ganes dinero!!\nKwai 848290921'],
+                'tags':['Amor','Meme','Chistes','Divertido','Reddit'],
+                "playlist":"WOOOOOOOW"
             },
-            'video_path':os.getcwd()+"\\"+r"data\video\1c995722-3eef-47a5-bf0b-2c94e4dc2354.mp4",
-            'thumbnail_path':os.getcwd()+"\\"+r"data\thumbnails\4e4ff322-f55c-4d96-a727-6eb95693a537.png"
+            'video_path':os.getcwd()+"\\"+r"test\test_videos\caption.mp4",
+            'thumbnail_path':os.getcwd()+"\\"+r"data\thumbnails\8ccd23f7-7292-41d7-a743-b2c9f2b7fd36.png"
             
         }
         post = Post()
         post.title = "titulo de prueba"
         context['post'] = post
-        print(context['post'].title)
+        
         upload_video(context)
